@@ -84,7 +84,9 @@ export const ChartJsLineChart03Cofigurations = (): ChartOptions<"line"> => {
       },
       tooltip: {
         callbacks: {
-          label: (context: any) => ` ${context.raw}`,
+          label: (context: TooltipItem<"line">) => {
+            return ` ${context.dataset.label}: ${context.raw}`;
+          },
         },
       },
       datalabels: {

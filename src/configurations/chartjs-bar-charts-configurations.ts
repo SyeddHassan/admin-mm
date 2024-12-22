@@ -1,4 +1,4 @@
-import { ChartOptions } from "chart.js";
+import { ChartOptions, TooltipItem } from "chart.js";
 import { useTheme } from "next-themes";
 
 export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
@@ -52,7 +52,9 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
       },
       tooltip: {
         callbacks: {
-          label: (context: any) => ` ${context.raw}`,
+          label: (context: TooltipItem<"bar">) => {
+            return ` ${context.dataset.label}: ${context.raw}`;
+          },
         },
       },
       datalabels: {
