@@ -40,7 +40,7 @@ export const ChartJsPieChart01 = ({ chartData }: ChartJsPieChart01Props) => {
   const options = ChartJsPieChart01Cofigurations();
 
   return (
-    <div className="relative mx-auto aspect-square md:w-[400px] w-[300px]">
+    <div className="relative mx-auto aspect-square lg:w-[400px] w-[350px]">
       <Doughnut data={data} options={options} />
     </div>
   );

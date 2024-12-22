@@ -20,7 +20,7 @@ const BroswerUsersCard = () => {
       </CardHeader>
 
       {/* BROWSER USERS PIE CHART */}
-      <CardContent className="py-4 mx-auto xl:h-[500px] xl:flex-center max-xl:py-12">
+      <CardContent className="py-4 mx-auto xl:h-[500px] xl:flex-center max-xl:py-12 px-0">
         <ChartJsPieChart01
           chartData={[
             { label: "Chrome", percentage: 20, color: "#2285f2" },

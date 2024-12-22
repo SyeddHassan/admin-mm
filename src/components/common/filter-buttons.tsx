@@ -101,7 +101,7 @@ export const FilterButtons02 = ({
       <div className="lg:w-fit md:w-[90%] w-full flex items-center gap-4">
         <Input
           placeholder={`Search ${isCampaign ? "Campaign" : "Session"} ID`}
-          className="h-[40px] rounded-[6px] lg:w-[300px] w-full focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0"
+          className="h-[40px] rounded-[6px] lg:w-[300px] w-full focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0 duration-200 transition-all"
           value={filteredInput}
           onChange={(e) => setFilteredInput(e.target.value)}
         />
