@@ -16,7 +16,11 @@ const UsersAvgMessagesCard = () => {
 
   return (
     <Card className="!standard-card-styling col-span-1">
+<<<<<<< Updated upstream
       <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center xl:justify-between">
+=======
+      <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center lg:justify-between">
+>>>>>>> Stashed changes
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Avg. Messages by User
         </CardTitle>
@@ -35,6 +39,8 @@ const UsersAvgMessagesCard = () => {
             value: 8,
             icon: <MessageCircle />,
           }}
+          leftText="Message"
+          bottomText="Time period"
         />
       </CardContent>
     </Card>

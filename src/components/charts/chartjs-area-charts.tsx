@@ -24,6 +24,8 @@ import {
   Filler,
 } from "chart.js";
 
+import zoomPlugin from "chartjs-plugin-zoom";
+
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -31,7 +33,8 @@ ChartJS.register(
   LineElement,
   Tooltip,
   Legend,
-  Filler
+  Filler,
+  zoomPlugin
 );
 
 export const ChartJsAreaChart01 = ({ data }: ChartJsAreaChart01Props) => {

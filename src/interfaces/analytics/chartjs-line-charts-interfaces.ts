@@ -24,5 +24,7 @@ export interface ChartJsLineChart03Props {
     text: string;
     value: number;
     icon?: React.ReactNode; // Allow React components for icons
-  };
+  }; 
+  leftText: string;
+  bottomText: string; 
 }

@@ -24,7 +24,16 @@ import {
   Legend,
 } from "chart.js";
 
-ChartJS.register(CategoryScale, LinearScale, BarElement, Tooltip, Legend);
+import zoomPlugin from "chartjs-plugin-zoom";
+
+ChartJS.register(
+  CategoryScale,
+  LinearScale,
+  BarElement,
+  Tooltip,
+  Legend,
+  zoomPlugin
+);
 
 export const ChartJsBarChart01 = ({ data }: ChartJsBarChart01Props) => {
   const chartData = {
@@ -33,23 +42,26 @@ export const ChartJsBarChart01 = ({ data }: ChartJsBarChart01Props) => {
       {
         label: "Users",
         data: data.users,
-        backgroundColor: "rgba(54, 162, 235, 0.7)",
-        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "#0C62EC",
+        borderColor: "#0C62EC",
         borderWidth: 1,
-      },
-      {
-        label: "Sessions",
-        data: data.sessions,
-        backgroundColor: "rgba(153, 102, 255, 0.7)",
-        borderColor: "rgba(153, 102, 255, 1)",
-        borderWidth: 1,
+        stack: "unstacked",
       },
       {
         label: "Project Mode ON",
         data: data.projectModeOn,
-        backgroundColor: "rgba(255, 99, 132, 0.7)",
-        borderColor: "rgba(255, 99, 132, 1)",
+        backgroundColor: "#F91B1B",
+        borderColor: "#F91B1B",
         borderWidth: 1,
+        stack: "stack1",
+      },
+      {
+        label: "Sessions",
+        data: data.sessions,
+        backgroundColor: "#AB40E8",
+        borderColor: "#AB40E8",
+        borderWidth: 1,
+        stack: "stack1",
       },
     ],
   };
