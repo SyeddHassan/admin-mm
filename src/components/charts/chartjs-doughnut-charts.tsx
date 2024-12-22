@@ -1,7 +1,6 @@
 "use client";
 
 import React, { useMemo } from "react";
-import { useTheme } from "next-themes";
 
 import {
   ChartJsDoughnutChart01Props,

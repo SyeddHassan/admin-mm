@@ -1,4 +1,4 @@
-import { ChartOptions } from "chart.js";
+import { ChartOptions, TooltipItem } from "chart.js";
 
 export const ChartJsLineChart01Cofigurations = (): ChartOptions<"line"> => {
   return {
@@ -42,9 +42,10 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
       legend: {
         position: "top" as const,
       },
+
       tooltip: {
         callbacks: {
-          label: (context: any) => {
+          label: (context: TooltipItem<"line">) => {
             return ` ${context.dataset.label}: ${context.raw}`;
           },
         },
