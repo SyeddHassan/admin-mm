@@ -5,7 +5,7 @@ import { DateRange } from "react-day-picker";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DateRangePicker } from "@/components/common/date-range-picker";
-import ResponsiveAreaChart from "@/components/charts/chartjs-area-charts";
+import { ChartJsAreaChart01 } from "@/components/charts/chartjs-area-charts";
 
 const PeakUsageTimesCard = () => {
   const [date, setDate] = React.useState<DateRange | undefined>({
@@ -25,7 +25,7 @@ const PeakUsageTimesCard = () => {
 
       {/* PEAK USAGE TIMES AREA CHART */}
       <CardContent className="h-[550px] w-full flex-center mx-auto max-xl:py-8">
-        <ResponsiveAreaChart
+        <ChartJsAreaChart01
           data={{
             labels: [
               "01 Jan 2014",

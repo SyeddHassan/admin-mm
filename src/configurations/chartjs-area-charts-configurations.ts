@@ -35,3 +35,35 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
     },
   };
 };
+
+export const ChartJsAreaChart02Cofigurations = (): ChartOptions<"line"> => {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: false,
+      },
+      datalabels: {
+        display: false,
+      },
+    },
+
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 5,
+        },
+      },
+    },
+  };
+};

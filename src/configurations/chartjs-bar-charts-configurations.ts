@@ -79,3 +79,33 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
     },
   };
 };
+
+export const ChartJsBarChart03Cofigurations = (): ChartOptions<"bar"> => {
+  return {
+    responsive: true,
+    plugins: {
+      legend: {
+        position: "top" as const,
+      },
+      title: {
+        display: true,
+        text: "Bar Chart Example",
+      },
+    },
+    scales: {
+      x: {
+        title: {
+          display: true,
+          text: "Hour of Day",
+        },
+      },
+      y: {
+        beginAtZero: true,
+        title: {
+          display: true,
+          text: "Count",
+        },
+      },
+    },
+  };
+};

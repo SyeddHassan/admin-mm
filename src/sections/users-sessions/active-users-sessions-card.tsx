@@ -27,18 +27,15 @@ const ActiveUsersSessionsCard = () => {
   return (
     <Card className="!standard-card-styling xl:col-span-2 col-span-1">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
-        {/* CARD HEADING */}
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Active Users and Sessions
         </CardTitle>
 
-        {/* DATE PICKER */}
         <DateRangePicker date={date} setDate={setDate} />
       </CardHeader>
 
       {/* ACTIVE USERS AND SESSIONS BAR CHART */}
       <CardContent className="py-5 flex gap-12 flex-col">
-        {/* FILTER BUTTONS */}
         <FilterButtons03
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}

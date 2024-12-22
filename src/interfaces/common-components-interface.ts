@@ -17,6 +17,10 @@ export interface FilterButtons03Props {
   selectedTab: string;
   setSelectedTab: (tab: string) => void;
 }
+export interface FilterButtons04Props {
+  selectedTab: string;
+  setSelectedTab: (tab: string) => void;
+}
 
 // LOADING PROPS
 export interface LoadingProps {

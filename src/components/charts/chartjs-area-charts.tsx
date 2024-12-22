@@ -2,9 +2,15 @@
 
 import React from "react";
 
-import { ChartJsAreaChart01Props } from "@/interfaces/analytics/chartjs-area-charts-interfaces";
+import {
+  ChartJsAreaChart01Props,
+  ChartJsAreaChart02Props,
+} from "@/interfaces/analytics/chartjs-area-charts-interfaces";
 
-import { ChartJsAreaChart01Cofigurations } from "@/configurations/chartjs-area-charts-configurations";
+import {
+  ChartJsAreaChart01Cofigurations,
+  ChartJsAreaChart02Cofigurations,
+} from "@/configurations/chartjs-area-charts-configurations";
 
 import { Line } from "react-chartjs-2";
 import {
@@ -28,7 +34,7 @@ ChartJS.register(
   Filler
 );
 
-const ResponsiveAreaChart = ({ data }: ChartJsAreaChart01Props) => {
+export const ChartJsAreaChart01 = ({ data }: ChartJsAreaChart01Props) => {
   const chartData = {
     labels: data.labels,
     datasets: [
@@ -64,4 +70,28 @@ const ResponsiveAreaChart = ({ data }: ChartJsAreaChart01Props) => {
   );
 };
 
-export default ResponsiveAreaChart;
+export const ChartJsAreaChart02 = ({ data }: ChartJsAreaChart02Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        label: "Client Replied",
+        data: data.values,
+        fill: true,
+        backgroundColor: "rgba(75, 192, 192, 0.2)",
+        borderColor: "rgba(75, 192, 192, 1)",
+        tension: 0.4,
+        borderWidth: 2,
+        pointRadius: 0,
+      },
+    ],
+  };
+
+  const options = ChartJsAreaChart02Cofigurations();
+
+  return (
+    <div className="relative w-full h-[500px]">
+      <Line data={chartData} options={options} />
+    </div>
+  );
+};

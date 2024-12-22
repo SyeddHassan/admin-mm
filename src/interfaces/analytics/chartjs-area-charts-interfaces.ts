@@ -5,3 +5,10 @@ export interface ChartJsAreaChart01Props {
     secure: number[];
   };
 }
+
+export interface ChartJsAreaChart02Props {
+  data: {
+    labels: string[];
+    values: number[];
+  };
+}

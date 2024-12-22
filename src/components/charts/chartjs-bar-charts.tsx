@@ -5,11 +5,13 @@ import React from "react";
 import {
   ChartJsBarChart01Props,
   ChartJsBarChart02Props,
+  ChartJsBarChart03Props,
 } from "@/interfaces/analytics/chartjs-bar-charts-interfaces";
 
 import {
   ChartJsBarChart01Cofigurations,
   ChartJsBarChart02Cofigurations,
+  ChartJsBarChart03Cofigurations,
 } from "@/configurations/chartjs-bar-charts-configurations";
 
 import { Bar } from "react-chartjs-2";
@@ -80,6 +82,32 @@ export const ChartJsBarChart02 = ({ data }: ChartJsBarChart02Props) => {
 
   return (
     <div className="relative w-full h-[450px]">
+      <Bar data={chartData} options={options} />
+    </div>
+  );
+};
+
+export const ChartJsBarChart03 = ({
+  labels,
+  values,
+}: ChartJsBarChart03Props) => {
+  const chartData = {
+    labels,
+    datasets: [
+      {
+        label: "Values",
+        data: values,
+        backgroundColor: "rgba(54, 162, 235, 0.5)",
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 1,
+      },
+    ],
+  };
+
+  const options = ChartJsBarChart03Cofigurations();
+
+  return (
+    <div className="relative w-full h-[600px] aspect-square mx-auto">
       <Bar data={chartData} options={options} />
     </div>
   );

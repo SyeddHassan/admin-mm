@@ -13,3 +13,8 @@ export interface ChartJsBarChart02Props {
     values: number[];
   };
 }
+
+export interface ChartJsBarChart03Props {
+  labels: string[];
+  values: number[];
+}
