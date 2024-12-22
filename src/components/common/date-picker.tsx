@@ -24,12 +24,12 @@ const DatePicker = ({ date, setDate }: DatePickerProps) => {
         <Button
           variant="outline"
           className={cn(
-            "h-[45px] sm:w-[230px] w-full border-border rounded-[6px] border text-[14px] !shadow-button-shadow bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover text-heading-color",
+            "h-[45px] sm:w-[225px] w-full border-border rounded-[6px] border text-heading-color text-[14px] font-medium !shadow-button-shadow font-inter tracking-wider bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover",
             !date && "text-paragraph-color"
           )}
         >
           {date ? format(date, "PPP") : <span>Select a date</span>}
-          <CalendarIcon className="ml-auto h-4 w-4 opacity-50" />
+          <CalendarIcon className="ml-auto h-4 w-4 -translate-y-[1px] opacity-50" />
         </Button>
       </PopoverTrigger>
       <PopoverContent className="w-auto p-0 bg-white dark:bg-primary-theme border-border" align="start">

@@ -2,9 +2,15 @@
 
 import React from "react";
 
-import { ChartJsBarChart01Props } from "@/interfaces/analytics/chartjs-bar-charts-interfaces";
+import {
+  ChartJsBarChart01Props,
+  ChartJsBarChart02Props,
+} from "@/interfaces/analytics/chartjs-bar-charts-interfaces";
 
-import { ChartJsBarChart01Cofigurations } from "@/configurations/chartjs-bar-charts-configurations";
+import {
+  ChartJsBarChart01Cofigurations,
+  ChartJsBarChart02Cofigurations,
+} from "@/configurations/chartjs-bar-charts-configurations";
 
 import { Bar } from "react-chartjs-2";
 import {
@@ -47,6 +53,30 @@ export const ChartJsBarChart01 = ({ data }: ChartJsBarChart01Props) => {
   };
 
   const options = ChartJsBarChart01Cofigurations();
+
+  return (
+    <div className="relative w-full h-[450px]">
+      <Bar data={chartData} options={options} />
+    </div>
+  );
+};
+
+export const ChartJsBarChart02 = ({ data }: ChartJsBarChart02Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        label: "Active Users",
+        data: data.values,
+        backgroundColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 0,
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderRadius: 4,
+      },
+    ],
+  };
+
+  const options = ChartJsBarChart02Cofigurations();
 
   return (
     <div className="relative w-full h-[450px]">

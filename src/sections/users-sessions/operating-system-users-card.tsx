@@ -6,28 +6,26 @@ import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
 import DatePicker from "@/components/common/date-picker";
 
-const SessionTypeCard = () => {
+const OperatingSystemUsersCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
 
   return (
-    <Card className="!standard-card-styling col-span-1">
-      <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
-        {/* CARD HEADING */}
+    <Card className="!standard-card-styling xl:col-span-1 md:col-span-2 col-span-1 xl:order-3 md:order-2 order-3">
+      <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center xl:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
-          Session Type
+          Users by Operation System
         </CardTitle>
 
-        {/* DATE PICKER */}
         <DatePicker date={selectedDate} setDate={setSelectedDate} />
       </CardHeader>
 
-      {/* SESSION TYPE DOUGHNUT CHART */}
-      <CardContent className="xl:h-full h-[500px] w-full flex-center mx-auto">
+      {/* OPERATING SYSTEM USERS DOUGHNUT CHART */}
+      <CardContent className="py-4 mx-auto xl:h-[500px] xl:flex-center max-xl:py-12 px-0">
         <ChartJsDoughnutChart02
           chartData={[
-            { label: "Standard", percentage: 30, color: "#5ebce1" },
-            { label: "Secure", percentage: 20, color: "#3a56af" },
-            { label: "Wallet", percentage: 70, color: "#ab40e8" },
+            { label: "Mac", percentage: 30, color: "#5ebce1" },
+            { label: "Windows", percentage: 30, color: "#3a56af" },
+            { label: "Linux", percentage: 40, color: "#ab40e8" },
           ]}
         />
       </CardContent>
@@ -35,4 +33,4 @@ const SessionTypeCard = () => {
   );
 };
 
-export default SessionTypeCard;
+export default OperatingSystemUsersCard;

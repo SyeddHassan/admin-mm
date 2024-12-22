@@ -5,9 +5,14 @@ import React from "react";
 import {
   ChartJsLineChart01Props,
   ChartJsLineChart02Props,
+  ChartJsLineChart03Props,
 } from "@/interfaces/analytics/chartjs-line-charts-interfaces";
 
-import { ChartJsLineChart01Cofigurations, ChartJsLineChart02Cofigurations } from "@/configurations/chartjs-line-charts-configurations";
+import {
+  ChartJsLineChart01Cofigurations,
+  ChartJsLineChart02Cofigurations,
+  ChartJsLineChart03Cofigurations,
+} from "@/configurations/chartjs-line-charts-configurations";
 
 import {
   Chart as ChartJS,
@@ -111,6 +116,41 @@ export const ChartJsLineChart02 = ({ data }: ChartJsLineChart02Props) => {
   return (
     <div className="relative w-full h-[450px]">
       <Line data={chartData} options={options} />
+    </div>
+  );
+};
+
+export const ChartJsLineChart03 = ({
+  data,
+  averageLabel,
+}: ChartJsLineChart03Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        data: data.values,
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 2,
+        pointBackgroundColor: "rgba(54, 162, 235, 1)",
+        fill: false,
+      },
+    ],
+  };
+
+  const options = ChartJsLineChart03Cofigurations();
+
+  return (
+    <div className="relative w-full h-[450px]">
+      <Line data={chartData} options={options} />
+      <div className="absolute top-6 right-10 flex items-center space-x-2 bg-white shadow-md rounded-lg p-2">
+        {averageLabel.icon && (
+          <span className="w-6 h-6">{averageLabel.icon}</span>
+        )}
+        <div className="text-center">
+          <div className="text-sm font-bold">{averageLabel.text}</div>
+          <div className="text-lg font-semibold">{averageLabel.value}</div>
+        </div>
+      </div>
     </div>
   );
 };

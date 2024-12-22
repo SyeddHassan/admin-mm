@@ -6,3 +6,10 @@ export interface ChartJsBarChart01Props {
     projectModeOn: number[];
   };
 }
+
+export interface ChartJsBarChart02Props {
+  data: {
+    labels: string[];
+    values: number[];
+  };
+}

@@ -73,3 +73,36 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
     },
   };
 };
+
+export const ChartJsLineChart03Cofigurations = (): ChartOptions<"line"> => {
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        callbacks: {
+          label: (context: any) => ` ${context.raw}`,
+        },
+      },
+      datalabels: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          color: "rgba(200, 200, 200, 0.5)",
+        },
+        beginAtZero: true,
+      },
+    },
+  };
+};

@@ -7,7 +7,7 @@ import { ChartJsLineChart01 } from "@/components/charts/chartjs-line-charts";
 import DatePicker from "@/components/common/date-picker";
 
 const PeakTimesCard = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(undefined);
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
 
   return (
     <Card className="standard-card-styling xl:col-span-1">
