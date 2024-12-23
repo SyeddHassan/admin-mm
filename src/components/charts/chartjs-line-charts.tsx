@@ -34,6 +34,7 @@ import {
   Title,
   Tooltip,
   Legend,
+  ScriptableContext,
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
@@ -230,7 +231,7 @@ export const ChartJsLineChart06 = ({ data }: ChartJsLineChart06Props) => {
     labels: data.labels,
     datasets: data.datasets.map((dataset) => ({
       ...dataset,
-      backgroundColor: (context: any) => {
+      backgroundColor: (context: ScriptableContext<"line">) => {
         const ctx = context.chart.ctx;
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
         gradient.addColorStop(0, "rgba(75, 192, 192, 0.5)");
@@ -263,7 +264,7 @@ export const ChartJsLineChart07 = ({ data }: ChartJsLineChart07Props) => {
     datasets: data.datasets.map((dataset, index) => ({
       ...dataset,
       borderColor: colorPairs[index % colorPairs.length].border,
-      backgroundColor: (context: any) => {
+      backgroundColor: (context: ScriptableContext<"line">) => {
         const ctx = context.chart.ctx;
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
         const colors = colorPairs[index % colorPairs.length].gradient;
@@ -288,7 +289,7 @@ export const ChartJsLineChart08 = ({ data }: ChartJsLineChart08Props) => {
     {
       border: "rgb(147, 51, 234)",
       gradient: ["rgba(147, 51, 234, 0.4)", "rgba(147, 51, 234, 0)"],
-    },  
+    },
   ];
 
   const chartData = {
@@ -296,7 +297,7 @@ export const ChartJsLineChart08 = ({ data }: ChartJsLineChart08Props) => {
     datasets: data.datasets.map((dataset, index) => ({
       ...dataset,
       borderColor: colorPairs[index % colorPairs.length].border,
-      backgroundColor: (context: any) => {
+      backgroundColor: (context: ScriptableContext<"line">) => {
         const ctx = context.chart.ctx;
         const gradient = ctx.createLinearGradient(0, 0, 0, 400);
         const colors = colorPairs[index % colorPairs.length].gradient;
