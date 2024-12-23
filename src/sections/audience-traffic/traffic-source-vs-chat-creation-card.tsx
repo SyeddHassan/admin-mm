@@ -3,10 +3,10 @@
 import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
 import DatePicker from "@/components/common/date-picker";
+import { ChartJsBarChart05 } from "@/components/charts/chartjs-bar-charts";
 
-const FileStatusCard = () => {
+const TrafficSourceVsChatCreationCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
     new Date()
   );
@@ -15,18 +15,19 @@ const FileStatusCard = () => {
     <Card className="!standard-card-styling col-span-1">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
-          Files Status
+          Traffic Sources vs Chat Creation
         </CardTitle>
 
         <DatePicker date={selectedDate} setDate={setSelectedDate} />
       </CardHeader>
 
-      {/* FILE STATUS DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto h-[500px] flex-center max-xl:py-12 px-0">
-        <ChartJsDoughnutChart02
-          chartData={[
-            { label: "Successful", percentage: 30, color: "#3a56af" },
-            { label: "Failed", percentage: 20, color: "#5ebce1" },
+      {/* TRAFFIC SOURCE VS CHAT CREATION BAR CHART */}
+      <CardContent className="py-4 h-[500px] max-md:px-2">
+        <ChartJsBarChart05
+          data={[
+            { category: "Direct", sources: 5, chatCreations: 15 },
+            { category: "Twitter", sources: 6, chatCreations: 8 },
+            { category: "Google.com", sources: 4, chatCreations: 2 },
           ]}
         />
       </CardContent>
@@ -34,4 +35,4 @@ const FileStatusCard = () => {
   );
 };
 
-export default FileStatusCard;
+export default TrafficSourceVsChatCreationCard;

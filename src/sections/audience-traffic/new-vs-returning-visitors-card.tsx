@@ -13,8 +13,8 @@ const NewVsReturningVisitorsCard = () => {
 
   return (
     <Card className="!standard-card-styling col-span-1">
-      <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center xl:justify-between">
-        <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-xl:order-2">
+      <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
+        <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           New vs Returning Visitors
         </CardTitle>
 
@@ -22,7 +22,7 @@ const NewVsReturningVisitorsCard = () => {
       </CardHeader>
 
       {/* NEW VS RETURNING VISITORS DOUGHNUT CHART */}
-      <CardContent className="mx-auto h-[600px] flex-center max-xl:py-12 px-0">
+      <CardContent className="py-4 mx-auto xl:h-[600px] xl:flex-center max-xl:py-12">
         <ChartJsDoughnutChart02
           chartData={[
             { label: "New Visitors", percentage: 30, color: "#3a56af" },

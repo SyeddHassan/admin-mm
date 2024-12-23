@@ -123,7 +123,7 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
         },
         beginAtZero: true,
         ticks: {
-          stepSize: 5,
+          stepSize: 50,
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
@@ -199,7 +199,7 @@ export const ChartJsLineChart03Cofigurations = (
           color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
         ticks: {
-          stepSize: 5,
+          stepSize: 50,
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {

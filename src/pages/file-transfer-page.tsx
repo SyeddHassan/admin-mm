@@ -14,12 +14,12 @@ const FileTransferPage = () => {
 
       <RealTimeFileTransferCard />
 
-      <div className="w-full grid xl:grid-cols-5 md:grid-cols-2 grid-cols-1 md:gap-4 gap-8">
+      <div className="w-full grid xl:grid-cols-5 grid-cols-1 md:gap-4 gap-8">
         <FileTypesCard />
         <FilePeakTimeCard />
       </div>
 
-      <div className="w-full grid md:grid-cols-2 grid-cols-1 md:gap-4 gap-8">
+      <div className="w-full grid xl:grid-cols-2 grid-cols-1 md:gap-4 gap-8">
         <FileStatusCard />
         <FileMomentServerCapacityCard />
       </div>
