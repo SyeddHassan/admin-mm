@@ -14,7 +14,7 @@ const PeakUsageTimesCard = () => {
   });
 
   return (
-    <Card className="!standard-card-styling xl:col-span-2">
+    <Card className="!standard-card-styling lg:col-span-2">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Peak Usage Times
@@ -24,7 +24,7 @@ const PeakUsageTimesCard = () => {
       </CardHeader>
 
       {/* PEAK USAGE TIMES AREA CHART */}
-      <CardContent className="h-[550px] w-full flex-center mx-auto max-xl:py-8">
+      <CardContent className="h-[550px] w-full flex-center mx-auto max-lg:py-8">
         <ChartJsAreaChart01
           data={{
             labels: [

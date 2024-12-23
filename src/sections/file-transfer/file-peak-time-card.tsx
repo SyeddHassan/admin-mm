@@ -12,7 +12,7 @@ const FilePeakTimeCard = () => {
   );
 
   return (
-    <Card className="!standard-card-styling xl:col-span-2 col-span-1">
+    <Card className="!standard-card-styling lg:col-span-2 col-span-1">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Files Peak Time
@@ -22,7 +22,7 @@ const FilePeakTimeCard = () => {
       </CardHeader>
 
       {/* FILE PEAK TIME LINE CHART */}
-      <CardContent className="h-[550px] w-full xl:w-[70%] md:w-[60%] max-xl:py-12 flex-center mx-auto">
+      <CardContent className="h-[550px] w-full lg:w-[70%] md:w-[60%] max-lg:py-12 flex-center mx-auto">
         <ChartJsLineChart01
           chartData={[
             {

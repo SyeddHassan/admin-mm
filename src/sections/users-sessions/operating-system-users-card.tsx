@@ -10,8 +10,8 @@ const OperatingSystemUsersCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
 
   return (
-    <Card className="!standard-card-styling xl:col-span-1 md:col-span-2 col-span-1 xl:order-3 md:order-2 order-3">
-      <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center xl:justify-between">
+    <Card className="!standard-card-styling lg:col-span-1 md:col-span-2 col-span-1 lg:order-3 md:order-2 order-3">
+      <CardHeader className="lg:py-4 py-6 border-b border-border flex lg:flex-row flex-col max-lg:gap-8 items-center lg:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Users by Operation System
         </CardTitle>
@@ -20,7 +20,7 @@ const OperatingSystemUsersCard = () => {
       </CardHeader>
 
       {/* OPERATING SYSTEM USERS DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto xl:h-[500px] xl:flex-center max-xl:py-12 px-0">
+      <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
         <ChartJsDoughnutChart02
           chartData={[
             { label: "Mac", percentage: 30, color: "#5ebce1" },

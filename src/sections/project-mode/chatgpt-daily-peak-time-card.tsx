@@ -22,7 +22,7 @@ const ChatGPTDailyPeakTimeCard = () => {
       </CardHeader>
 
       {/* CHATGPT DAILY PEAK TIME LINE CHART */}
-      <CardContent className="h-[500px] w-full xl:w-[70%] md:w-[60%] max-xl:py-12 flex-center mx-auto">
+      <CardContent className="h-[500px] w-full lg:w-[70%] md:w-[60%] max-lg:py-12 flex-center mx-auto">
         <ChartJsLineChart01
           chartData={[
             {

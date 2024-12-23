@@ -20,27 +20,27 @@ const UsersSessionsPage = () => {
     <main className="page-layout-standard section-margin-standard">
       <SectionalHeading title="Users & Sessions" />
 
-      <div className="w-full grid xl:grid-cols-3 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8">
         <ActiveUsersSessionsCard />
         <SessionTypeCard />
       </div>
 
-      <div className="w-full grid xl:grid-cols-5 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-5 grid-cols-1 lg:gap-4 gap-8">
         <ActiveRegionsSessionsCard />
         <AvgSessionDurationCard />
       </div>
 
-      <div className="w-full grid xl:grid-cols-3 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8">
         <PeakUsageTimesCard />
         <PeakTimesCard />
       </div>
 
-      <div className="w-full grid xl:grid-cols-3 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8">
         <ActiveUsersSessionTimeCard />
         <UsersSharingLinkCard />
       </div>
 
-      <div className="w-full grid xl:grid-cols-3 md:grid-cols-4 grid-cols-1 md:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 md:grid-cols-4 grid-cols-1 md:gap-4 gap-8">
         <DeviceUsersCard />
         <BroswerUsersCard />
         <OperatingSystemUsersCard />

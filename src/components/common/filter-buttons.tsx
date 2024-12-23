@@ -50,7 +50,7 @@ export const FilterButtons02 = ({
   setFilteredInput,
 }: FilterButtons02Props) => {
   return (
-    <div className="w-full flex items-center xl:justify-between xl:flex-row flex-col max-xl:gap-8">
+    <div className="w-full flex items-center lg:justify-between lg:flex-row flex-col max-lg:gap-8">
       {/* TABS */}
       <div className="md:flex max-sm:w-full max-md:grid max-md:grid-cols-2 font-inter font-medium">
         <Button

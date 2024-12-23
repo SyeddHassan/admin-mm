@@ -166,17 +166,17 @@ const RealTimeSessionMonitoringTable = ({
                   key={header.id}
                   className={`${
                     header.column.id === "actions"
-                      ? "xl:w-[250px]"
+                      ? "lg:w-[250px]"
                       : header.column.id === "sessionId"
-                      ? "xl:w-[200px]"
+                      ? "lg:w-[200px]"
                       : header.column.id === "participants"
-                      ? "xl:w-[500px]"
+                      ? "lg:w-[500px]"
                       : header.column.id === "sessionType"
-                      ? "xl:w-[180px] xl:pl-14"
+                      ? "lg:w-[180px] lg:pl-14"
                       : header.column.id === "location"
-                      ? "xl:w-[200px]"
+                      ? "lg:w-[200px]"
                       : header.column.id === "duration"
-                      ? "xl:w-[200px]"
+                      ? "lg:w-[200px]"
                       : ""
                   }`}
                 >
@@ -199,7 +199,7 @@ const RealTimeSessionMonitoringTable = ({
                   <TableCell
                     key={cell.id}
                     className={`${
-                      cell.column.id === "sessionType" && "xl:pl-14"
+                      cell.column.id === "sessionType" && "lg:pl-14"
                     }`}
                   >
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}

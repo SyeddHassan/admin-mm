@@ -22,7 +22,7 @@ const FileStatusCard = () => {
       </CardHeader>
 
       {/* FILE STATUS DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto h-[500px] flex-center max-xl:py-12 px-0">
+      <CardContent className="py-4 mx-auto h-[500px] flex-center max-lg:py-12 px-0">
         <ChartJsDoughnutChart02
           chartData={[
             { label: "Successful", percentage: 30, color: "#3a56af" },

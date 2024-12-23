@@ -15,12 +15,12 @@ const ProjectModePage = () => {
     <main className="page-layout-standard section-margin-standard">
       <SectionalHeading title="Project Mode (ChatGPT)" />
 
-      <div className="w-full grid xl:grid-cols-3 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8">
         <UsageFrequencyCard />
         <TranscriptDownloadCard />
       </div>
 
-      <div className="w-full grid md:grid-cols-4 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid md:grid-cols-4 grid-cols-1 lg:gap-4 gap-8">
         <AvgSessionDurationProjectModeCard />
         <ProjectModeDevicesCard />
         <ProjectModeOperatingSystemsCard />
@@ -28,7 +28,7 @@ const ProjectModePage = () => {
 
       <ProjectModeActivationsCard />
 
-      <div className="w-full grid xl:grid-cols-3 md:grid-cols-4 grid-cols-1 md:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 md:grid-cols-4 grid-cols-1 md:gap-4 gap-8">
         <ChatGPTPromptsCard />
         <ChatGPTDailyPeakTimeCard />
       </div>

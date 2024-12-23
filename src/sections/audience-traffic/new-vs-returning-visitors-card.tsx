@@ -22,7 +22,7 @@ const NewVsReturningVisitorsCard = () => {
       </CardHeader>
 
       {/* NEW VS RETURNING VISITORS DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto xl:h-[600px] xl:flex-center max-xl:py-12">
+      <CardContent className="py-4 mx-auto lg:h-[600px] lg:flex-center max-lg:py-12">
         <ChartJsDoughnutChart02
           chartData={[
             { label: "New Visitors", percentage: 30, color: "#3a56af" },

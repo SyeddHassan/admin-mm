@@ -14,19 +14,19 @@ const AudienceTrafficPage = () => {
     <main className="page-layout-standard section-margin-standard">
       <SectionalHeading title="Audience Traffic" />
 
-      <div className="w-full grid xl:grid-cols-3 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8">
         <TrafficOverTimeCard />
         <NewVsReturningVisitorsCard />
       </div>
 
       <TrafficTimeDaysCard />
 
-      <div className="w-full grid xl:grid-cols-3 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 lg:gap-4 gap-8">
         <DeviceTrafficCard />
         <OperatingSystemTrafficCard />
       </div>
 
-      <div className="w-full grid xl:grid-cols-2 grid-cols-1 xl:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-2 grid-cols-1 lg:gap-4 gap-8">
         <TrafficSourceVsChatCreationCard />
         <PageVisitsCard />
       </div>

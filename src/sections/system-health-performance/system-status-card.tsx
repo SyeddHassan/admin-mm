@@ -5,8 +5,8 @@ import TimelineChart from "@/components/charts/timeline-chart";
 
 const SystemStatusCard = () => {
   return (
-    <Card className="!standard-card-styling xl:col-span-2 col-span-1">
-      <CardHeader className="xl:py-8 py-6 border-b border-border">
+    <Card className="!standard-card-styling lg:col-span-2 col-span-1">
+      <CardHeader className="lg:py-8 py-6 border-b border-border">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px]">
           System Status
         </CardTitle>

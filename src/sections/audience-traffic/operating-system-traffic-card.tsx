@@ -22,7 +22,7 @@ const OperatingSystemTrafficCard = () => {
       </CardHeader>
 
       {/* TRAFFIC BY OPERATING SYSTEM DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto xl:h-[700px] xl:flex-center max-xl:py-12">
+      <CardContent className="py-4 mx-auto lg:h-[700px] lg:flex-center max-lg:py-12">
         <ChartJsDoughnutChart02
           chartData={[
             { label: "Mac", percentage: 30, color: "#5ebce1" },

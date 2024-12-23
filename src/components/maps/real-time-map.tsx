@@ -28,7 +28,7 @@ export const RealTimeMap = ({
         panX: "rotateX",
         panY: "translateY",
         projection: am5map.geoMercator(),
-        pinchZoom: false,
+        pinchZoom: true,
         wheelSensitivity: 0.5,
         maxZoomLevel: 32,
         minZoomLevel: 1,

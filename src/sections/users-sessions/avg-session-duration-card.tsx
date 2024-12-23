@@ -14,7 +14,7 @@ const AvgSessionDurationCard = () => {
   });
 
   return (
-    <Card className="!standard-card-styling xl:col-span-3">
+    <Card className="!standard-card-styling lg:col-span-3">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Average Session Duration
@@ -24,7 +24,7 @@ const AvgSessionDurationCard = () => {
       </CardHeader>
 
       {/* AVERAGE SESSION DURATION LINE CHART */}
-      <CardContent className="xl:h-full h-[550px] w-full flex-center mx-auto max-xl:py-8 xl:-translate-y-[2rem]">
+      <CardContent className="lg:h-full h-[550px] w-full flex-center mx-auto max-lg:py-8 lg:-translate-y-[2rem]">
         <ChartJsLineChart02
           data={{
             date: [

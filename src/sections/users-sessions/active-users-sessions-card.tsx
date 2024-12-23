@@ -25,7 +25,7 @@ const ActiveUsersSessionsCard = () => {
   const [selectedTab, setSelectedTab] = useState("View All");
 
   return (
-    <Card className="!standard-card-styling xl:col-span-2 col-span-1">
+    <Card className="!standard-card-styling lg:col-span-2 col-span-1">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Active Users and Sessions
@@ -64,8 +64,8 @@ const ActiveUsersSessionsCard = () => {
         />
       </CardContent>
 
-      <CardFooter className="md:py-6 py-12 border-t border-border grid xl:grid-cols-4 md:grid-cols-2 grid-cols-1 xl:gap-4 gap-8">
-        <div className="flex flex-col xl:gap-2 gap-4 max-xl:items-center">
+      <CardFooter className="md:py-6 py-12 border-t border-border grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 lg:gap-4 gap-8">
+        <div className="flex flex-col lg:gap-2 gap-4 max-lg:items-center">
           <h1 className="text-[16px] leading-[16px] font-semibold font-inter tracking-wider">
             Users
           </h1>
@@ -80,7 +80,7 @@ const ActiveUsersSessionsCard = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:gap-2 gap-4 max-xl:items-center">
+        <div className="flex flex-col lg:gap-2 gap-4 max-lg:items-center">
           <h1 className="text-[16px] leading-[16px] font-semibold font-inter tracking-wider">
             Session
           </h1>
@@ -95,7 +95,7 @@ const ActiveUsersSessionsCard = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:gap-2 gap-4 max-xl:items-center">
+        <div className="flex flex-col lg:gap-2 gap-4 max-lg:items-center">
           <h1 className="text-[16px] leading-[16px] font-semibold font-inter tracking-wider">
             Bounce Rate
           </h1>
@@ -110,7 +110,7 @@ const ActiveUsersSessionsCard = () => {
           </div>
         </div>
 
-        <div className="flex flex-col xl:gap-2 gap-4 max-xl:items-center">
+        <div className="flex flex-col lg:gap-2 gap-4 max-lg:items-center">
           <h1 className="text-[16px] leading-[16px] font-semibold font-inter tracking-wider">
             Session Duration
           </h1>

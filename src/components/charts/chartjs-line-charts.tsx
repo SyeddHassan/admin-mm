@@ -7,6 +7,7 @@ import {
   ChartJsLineChart02Props,
   ChartJsLineChart03Props,
   ChartJsLineChart04Props,
+  ChartJsLineChart05Props,
 } from "@/interfaces/analytics/chartjs-line-charts-interfaces";
 
 import {
@@ -14,6 +15,7 @@ import {
   ChartJsLineChart02Cofigurations,
   ChartJsLineChart03Cofigurations,
   ChartJsLineChart04Cofigurations,
+  ChartJsLineChart05Cofigurations,
 } from "@/configurations/chartjs-line-charts-configurations";
 
 import {
@@ -147,7 +149,7 @@ export const ChartJsLineChart03 = ({
   return (
     <div className="relative w-full h-[450px]">
       <Line data={chartData} options={options} />
-      <div className="absolute top-6 right-10 flex items-center max-lg:gap-2 xl:flex-row flex-col space-x-2 bg-white dark:bg-background-color dark:border dark:border-border shadow-md rounded-lg p-3">
+      <div className="absolute top-6 right-10 flex items-center max-lg:gap-2 lg:flex-row flex-col space-x-2 bg-white dark:bg-background-color dark:border dark:border-border shadow-md rounded-lg p-3">
         {averageLabel.icon && (
           <span className="w-10 h-10 flex items-center justify-center bg-[#976CDD] rounded-full">
             <span className="text-white">{averageLabel.icon}</span>
@@ -185,6 +187,30 @@ export const ChartJsLineChart04 = ({
   };
 
   const options = ChartJsLineChart04Cofigurations(leftText);
+
+  return (
+    <div className="relative w-full h-[450px]">
+      <Line data={chartData} options={options} />
+    </div>
+  );
+};
+
+export const ChartJsLineChart05 = ({ data }: ChartJsLineChart05Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        data: data.values,
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 2,
+        pointBackgroundColor: "rgba(54, 162, 235, 1)",
+        fill: false,
+        pointRadius: 0,
+      },
+    ],
+  };
+
+  const options = ChartJsLineChart05Cofigurations();
 
   return (
     <div className="relative w-full h-[450px]">

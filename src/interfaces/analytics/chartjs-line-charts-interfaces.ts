@@ -36,3 +36,10 @@ export interface ChartJsLineChart04Props {
   };
   leftText: string;
 }
+
+export interface ChartJsLineChart05Props {
+  data: {
+    labels: string[];
+    values: number[];
+  };
+}

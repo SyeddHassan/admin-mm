@@ -10,7 +10,7 @@ const BroswerUsersCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date());
 
   return (
-    <Card className="!standard-card-styling xl:col-span-1 md:col-span-4 col-span-1 xl:order-2 md:order-3 order-2">
+    <Card className="!standard-card-styling lg:col-span-1 md:col-span-4 col-span-1 lg:order-2 md:order-3 order-2">
       <CardHeader className="md:py-4 py-6 border-b border-border flex md:flex-row flex-col max-md:gap-8 items-center md:justify-between">
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Users by Browser
@@ -20,7 +20,7 @@ const BroswerUsersCard = () => {
       </CardHeader>
 
       {/* BROWSER USERS PIE CHART */}
-      <CardContent className="py-4 mx-auto xl:h-[500px] xl:flex-center max-xl:py-12 px-0">
+      <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
         <ChartJsPieChart01
           chartData={[
             { label: "Chrome", percentage: 20, color: "#2285f2" },

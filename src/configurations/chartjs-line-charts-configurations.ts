@@ -312,3 +312,68 @@ export const ChartJsLineChart04Cofigurations = (
     },
   };
 };
+
+export const ChartJsLineChart05Cofigurations = (): ChartOptions<"line"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+
+      tooltip: {
+        enabled: false,
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
+
+    scales: {
+      x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+        },
+        ticks: {
+          stepSize: 30,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+
+        beginAtZero: true,
+      },
+    },
+  };
+};

@@ -20,7 +20,7 @@ const UsersSharingLinkCard = () => {
       </CardHeader>
 
       {/* USERS SHARING LINK PIE CHART */}
-      <CardContent className="mx-auto xl:h-full xl:flex-center max-xl:py-12 px-0">
+      <CardContent className="mx-auto lg:h-full lg:flex-center max-lg:py-12 px-0">
         <ChartJsPieChart01
           chartData={[
             { label: "Message", percentage: 20, color: "#2285f2" },

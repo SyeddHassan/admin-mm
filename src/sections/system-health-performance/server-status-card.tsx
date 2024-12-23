@@ -22,7 +22,7 @@ const ServerStatusCard = () => {
       </CardHeader>
 
       {/* SERVER STATUS DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto h-[500px] flex-center max-xl:py-12 px-0">
+      <CardContent className="py-4 mx-auto h-[500px] flex-center max-lg:py-12 px-0">
         <ChartJsDoughnutChart03 percentage={85} />
       </CardContent>
     </Card>

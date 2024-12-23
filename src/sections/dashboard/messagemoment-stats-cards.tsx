@@ -6,21 +6,21 @@ import { Card, CardContent } from "@/components/ui/card";
 
 const MessageMomentStatsCards = () => {
   return (
-    <section className="w-full grid xl:grid-cols-5 sm:grid-cols-4 grid-cols-1 gap-4">
+    <section className="w-full grid lg:grid-cols-5 sm:grid-cols-4 grid-cols-1 gap-4">
       {MessageMomentStatsCardsData.map((data) => (
         <Card
           key={data.stats}
           className={`w-full lg:h-[130px] h-[180px] cursor-pointer rounded-[0.75rem] shadow-card-shadow-1 hover:shadow-card-shadow-2 !animation-standard flex-center border-border ${
             data.stats === 1
-              ? "xl:col-span-1 sm:col-span-2 col-span-1"
+              ? "lg:col-span-1 sm:col-span-2 col-span-1"
               : data.stats === 2
-              ? "xl:col-span-1 sm:col-span-2 col-span-1"
+              ? "lg:col-span-1 sm:col-span-2 col-span-1"
               : data.stats === 3
-              ? "xl:col-span-1 sm:col-span-4 col-span-1"
+              ? "lg:col-span-1 sm:col-span-4 col-span-1"
               : data.stats === 4
-              ? "xl:col-span-1 sm:col-span-2 col-span-1"
+              ? "lg:col-span-1 sm:col-span-2 col-span-1"
               : data.stats === 5
-              ? "xl:col-span-1 sm:col-span-2 col-span-1"
+              ? "lg:col-span-1 sm:col-span-2 col-span-1"
               : ""
           }`}
         >
