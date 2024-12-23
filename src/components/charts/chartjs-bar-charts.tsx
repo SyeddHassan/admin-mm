@@ -24,15 +24,12 @@ import {
   Legend,
 } from "chart.js";
 
-import zoomPlugin from "chartjs-plugin-zoom";
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
   BarElement,
   Tooltip,
   Legend,
-  zoomPlugin
 );
 
 export const ChartJsBarChart01 = ({ data }: ChartJsBarChart01Props) => {

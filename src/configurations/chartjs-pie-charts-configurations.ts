@@ -14,7 +14,7 @@ export const ChartJsPieChart01Cofigurations = (): ChartOptions<"doughnut"> => {
           color: isDarkTheme ? "#ffffff" : "#000000",
           usePointStyle: true,
           pointStyle: "circle",
-          padding: 20,
+          padding: 25,
           font: {
             family: "Inter",
             size: 14,
@@ -31,10 +31,9 @@ export const ChartJsPieChart01Cofigurations = (): ChartOptions<"doughnut"> => {
         cornerRadius: 8,
         padding: 10,
         displayColors: false,
-        multiKeyBackground: "#fff",
-        titleMarginBottom: 0,
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
         titleFont: {
-          size: 0,
+          size: 14,
         },
         bodyFont: {
           family: "Inter",
@@ -49,6 +48,10 @@ export const ChartJsPieChart01Cofigurations = (): ChartOptions<"doughnut"> => {
             return `${label}: ${value}%`;
           },
         },
+        animation: {
+          duration: 1000,
+          easing: "easeOutCubic",
+        },
       },
 
       datalabels: {
@@ -59,6 +62,21 @@ export const ChartJsPieChart01Cofigurations = (): ChartOptions<"doughnut"> => {
           family: "JetBrains Mono, sans-serif",
           size: 12,
           weight: "normal",
+        },
+      },
+    },
+
+    elements: {
+      arc: {
+        borderWidth: 3,
+        borderColor: isDarkTheme ? "#000000" : "#ffffff",
+        hoverBackgroundColor: (ctx) => {
+          const raw = ctx.raw as { backgroundColor: string };
+          return raw.backgroundColor;
+        },
+        hoverBorderColor: (ctx) => {
+          const raw = ctx.raw as { borderColor: string };
+          return raw.borderColor;
         },
       },
     },

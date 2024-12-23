@@ -31,8 +31,6 @@ export const ChartJsPieChart01 = ({ chartData }: ChartJsPieChart01Props) => {
       {
         data: chartData.map((data) => data.percentage),
         backgroundColor: chartData.map((data) => data.color),
-        borderColor: "#fff",
-        borderWidth: 3,
       },
     ],
   };

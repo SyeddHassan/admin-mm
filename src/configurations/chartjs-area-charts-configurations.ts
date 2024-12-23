@@ -1,6 +1,10 @@
-import { ChartOptions, TooltipItem } from "chart.js";
+import { ChartOptions } from "chart.js";
+import { useTheme } from "next-themes";
 
 export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
   return {
     responsive: true,
     maintainAspectRatio: false,
@@ -13,6 +17,7 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
           pointStyleWidth: 10,
           boxHeight: 7,
           padding: 25,
+          color: isDarkTheme ? "#ffffff" : "#000000",
           font: {
             family: "Inter",
             size: 14,
@@ -23,10 +28,9 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
 
       tooltip: {
         enabled: true,
-        backgroundColor: "rgba(0, 0, 0, 1)",
-        titleColor: "#fff",
-        bodyColor: "#fff",
-        footerColor: "#fff",
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
         padding: 10,
         cornerRadius: 5,
         boxWidth: 10,
@@ -50,25 +54,8 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
         caretSize: 5,
         caretPadding: 10,
         animation: {
-          duration: 200,
-          easing: "easeOutQuart",
-        },
-      },
-
-      zoom: {
-        zoom: {
-          wheel: {
-            enabled: true,
-            speed: 0.2,
-          },
-          pinch: {
-            enabled: true,
-          },
-          mode: "xy",
-        },
-        pan: {
-          enabled: true,
-          mode: "xy",
+          duration: 1000,
+          easing: "easeOutCubic",
         },
       },
 
@@ -76,31 +63,40 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
         display: false,
       },
     },
+
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
+
     interaction: {
       mode: "nearest",
       intersect: false,
     },
+
     scales: {
       x: {
-        grid: {
-          display: false,
-        },
         ticks: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        grid: {
+          display: false,
         },
       },
       y: {
         grid: {
-          color: "rgba(200, 200, 200, 0.5)",
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
+        beginAtZero: true,
         ticks: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         title: {
           display: true,
@@ -109,7 +105,7 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
             family: "Inter",
             size: 14,
           },
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
     },

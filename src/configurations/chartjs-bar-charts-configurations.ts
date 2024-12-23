@@ -1,7 +1,10 @@
-import { ChartOptions, TooltipItem } from "chart.js";
+import { ChartOptions } from "chart.js";
 import { useTheme } from "next-themes";
 
 export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
   return {
     responsive: true,
     maintainAspectRatio: false,
@@ -14,6 +17,7 @@ export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
           pointStyleWidth: 10,
           boxHeight: 7,
           padding: 25,
+          color: isDarkTheme ? "#ffffff" : "#000000",
           font: {
             family: "Inter",
             size: 14,
@@ -21,19 +25,20 @@ export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
           },
         },
       },
+
       tooltip: {
         enabled: true,
-        backgroundColor: "rgba(0, 0, 0, 1)",
-        titleColor: "#fff",
-        bodyColor: "#fff",
-        footerColor: "#fff",
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
+        footerColor: isDarkTheme ? "#000000" : "#ffffff",
         padding: 10,
         cornerRadius: 5,
         boxWidth: 10,
         boxHeight: 10,
         displayColors: false,
         bodyFont: {
-          family: "Inter",
+          family: "Jetbrains mono",
           size: 12,
           weight: "normal",
         },
@@ -50,44 +55,30 @@ export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
         caretSize: 5,
         caretPadding: 10,
         animation: {
-          duration: 200,
-          easing: "easeOutQuart",
+          duration: 1000,
+          easing: "easeOutCubic",
         },
       },
 
       datalabels: {
         display: false,
       },
-      zoom: {
-        zoom: {
-          wheel: {
-            enabled: true,
-            speed: 0.2,
-          },
-          pinch: {
-            enabled: true,
-          },
-          mode: "xy",
-        },
-        pan: {
-          enabled: true,
-          mode: "xy",
-        },
-      },
     },
+
     layout: {
       padding: {
         bottom: 20,
       },
     },
+
     scales: {
       x: {
         stacked: true,
         ticks: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         grid: {
           display: false,
@@ -97,10 +88,13 @@ export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
         stacked: true,
         beginAtZero: true,
         ticks: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
       },
     },
@@ -131,19 +125,20 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
           },
         },
       },
+
       tooltip: {
         enabled: true,
-        backgroundColor: "rgba(0, 0, 0, 1)",
-        titleColor: "#fff",
-        bodyColor: "#fff",
-        footerColor: "#fff",
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
+        footerColor: isDarkTheme ? "#000000" : "#ffffff",
         padding: 10,
         cornerRadius: 5,
         boxWidth: 10,
         boxHeight: 10,
         displayColors: false,
         bodyFont: {
-          family: "Inter",
+          family: "Jetbrains mono",
           size: 12,
           weight: "normal",
         },
@@ -160,52 +155,52 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
         caretSize: 5,
         caretPadding: 10,
         animation: {
-          duration: 200,
-          easing: "easeOutQuart",
+          duration: 1000,
+          easing: "easeOutCubic",
         },
       },
-      zoom: {
-        zoom: {
-          wheel: {
-            enabled: true,
-            speed: 0.2,
-          },
-          pinch: {
-            enabled: true,
-          },
-          mode: "xy",
-        },
-        pan: {
-          enabled: true,
-          mode: "xy",
-        },
-      },
+
       datalabels: {
-        display: false,
+        display: true,
+        align: "start",
+        anchor: "end",
+        offset: -20,
+        color: isDarkTheme ? "#ffffff" : "#000000",
+        font: {
+          family: "Jetbrains mono",
+          size: 14,
+          weight: "bold",
+        },
       },
     },
+
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
+
     scales: {
       x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        border: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
         grid: {
           display: false,
         },
-        ticks: {
-          color: "black",
-        },
-        border: {
-          color: "black",
-        },
       },
       y: {
-        grid: {
-          color: "rgba(200, 200, 200, 0.5)",
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
-        ticks: {
-          precision: 0,
-          color: "black",
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
         title: {
           display: true,
@@ -214,7 +209,7 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
             family: "Inter",
             size: 14,
           },
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         beginAtZero: true,
       },
@@ -223,29 +218,93 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
 };
 
 export const ChartJsBarChart03Cofigurations = (): ChartOptions<"bar"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
   return {
     responsive: true,
     plugins: {
       legend: {
-        position: "top" as const,
+        display: false,
       },
-      title: {
-        display: true,
-        text: "Bar Chart Example",
+
+      tooltip: {
+        enabled: true,
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
+        footerColor: isDarkTheme ? "#000000" : "#ffffff",
+        padding: 10,
+        cornerRadius: 5,
+        boxWidth: 10,
+        boxHeight: 10,
+        displayColors: false,
+        bodyFont: {
+          family: "Jetbrains mono",
+          size: 12,
+          weight: "normal",
+        },
+        titleFont: {
+          family: "Inter",
+          size: 14,
+          weight: "bold",
+        },
+        footerFont: {
+          family: "Inter",
+          size: 12,
+          weight: "normal",
+        },
+        caretSize: 5,
+        caretPadding: 10,
+        animation: {
+          duration: 1000,
+          easing: "easeOutCubic",
+        },
+      },
+
+      datalabels: {
+        display: false,
       },
     },
+
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
+
     scales: {
       x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        border: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        grid: {
+          display: false,
+        },
         title: {
           display: true,
           text: "Hour of Day",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
       y: {
         beginAtZero: true,
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        border: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+        },
         title: {
           display: true,
-          text: "Count",
+          text: "Avg. site sessions",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
     },

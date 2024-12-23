@@ -1,4 +1,5 @@
-import { ChartOptions, TooltipItem } from "chart.js";
+import { ChartOptions } from "chart.js";
+import { useTheme } from "next-themes";
 
 export const ChartJsLineChart01Cofigurations = (): ChartOptions<"line"> => {
   return {
@@ -35,6 +36,9 @@ export const ChartJsLineChart01Cofigurations = (): ChartOptions<"line"> => {
 };
 
 export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
   return {
     responsive: true,
     maintainAspectRatio: false,
@@ -48,6 +52,7 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
           pointStyleWidth: 10,
           boxHeight: 7,
           padding: 25,
+          color: isDarkTheme ? "#ffffff" : "#000000",
           font: {
             family: "Inter",
             size: 14,
@@ -58,10 +63,9 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
 
       tooltip: {
         enabled: true,
-        backgroundColor: "rgba(0, 0, 0, 1)",
-        titleColor: "#fff",
-        bodyColor: "#fff",
-        footerColor: "#fff",
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
         padding: 10,
         cornerRadius: 5,
         boxWidth: 10,
@@ -85,55 +89,45 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
         caretSize: 5,
         caretPadding: 10,
         animation: {
-          duration: 200,
-          easing: "easeOutQuart",
+          duration: 1000,
+          easing: "easeOutCubic",
         },
       },
 
       datalabels: {
         display: false,
       },
-      zoom: {
-        zoom: {
-          wheel: {
-            enabled: true,
-            speed: 0.2,
-          },
-          pinch: {
-            enabled: true,
-          },
-          mode: "xy",
-        },
-        pan: {
-          enabled: true,
-          mode: "xy",
-        },
+    },
+
+    layout: {
+      padding: {
+        bottom: 20,
       },
     },
 
     scales: {
       x: {
-        grid: {
-          display: false,
-        },
         ticks: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        grid: {
+          display: false,
         },
       },
       y: {
         grid: {
-          color: "rgba(200, 200, 200, 0.5)",
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
         beginAtZero: true,
         ticks: {
           stepSize: 5,
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         title: {
           display: true,
@@ -142,7 +136,7 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
             family: "Inter",
             size: 14,
           },
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
     },
@@ -153,6 +147,9 @@ export const ChartJsLineChart03Cofigurations = (
   leftText: string,
   bottomText: string
 ): ChartOptions<"line"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
   return {
     responsive: true,
     maintainAspectRatio: false,
@@ -160,98 +157,62 @@ export const ChartJsLineChart03Cofigurations = (
       legend: {
         display: false,
       },
+
       tooltip: {
-        enabled: true,
-        backgroundColor: "rgba(0, 0, 0, 1)",
-        titleColor: "#fff",
-        bodyColor: "#fff",
-        footerColor: "#fff",
-        padding: 10,
-        cornerRadius: 5,
-        boxWidth: 10,
-        boxHeight: 10,
-        displayColors: false,
-        bodyFont: {
-          family: "Inter",
-          size: 12,
-          weight: "normal",
-        },
-        titleFont: {
-          family: "Inter",
-          size: 14,
-          weight: "bold",
-        },
-        footerFont: {
-          family: "Inter",
-          size: 12,
-          weight: "normal",
-        },
-        caretSize: 5,
-        caretPadding: 10,
-        animation: {
-          duration: 200,
-          easing: "easeOutQuart",
-        },
+        enabled: false,
       },
-      zoom: {
-        zoom: {
-          wheel: {
-            enabled: true,
-            speed: 0.2,
-          },
-          pinch: {
-            enabled: true,
-          },
-          mode: "xy",
-        },
-        pan: {
-          enabled: true,
-          mode: "xy",
-        },
-      },
+
       datalabels: {
         display: false,
       },
     },
+
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
+
     scales: {
       x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+        border: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+        },
         grid: {
           display: false,
         },
-        ticks: {
-          color: "black",
-        },
-        border: {
-          color: "black",
-        },
         title: {
           display: true,
-          text: bottomText, 
+          text: bottomText,
           font: {
             family: "Inter",
             size: 14,
           },
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
       y: {
         grid: {
-          color: "rgba(200, 200, 200, 0.5)",
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
         ticks: {
-          color: "black",
+          stepSize: 5,
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
         title: {
           display: true,
-          text: leftText, 
+          text: leftText,
           font: {
             family: "Inter",
             size: 14,
           },
-          color: "black",
+          color: isDarkTheme ? "#ffffff" : "#000000",
         },
 
         beginAtZero: true,

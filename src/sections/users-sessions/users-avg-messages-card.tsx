@@ -6,7 +6,9 @@ import { DateRange } from "react-day-picker";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartJsLineChart03 } from "@/components/charts/chartjs-line-charts";
 import { DateRangePicker } from "@/components/common/date-range-picker";
-import { MessageCircle } from "lucide-react";
+
+import { BiSolidMessageSquareDetail } from "react-icons/bi";
+
 
 const UsersAvgMessagesCard = () => {
   const [date, setDate] = React.useState<DateRange | undefined>({
@@ -16,11 +18,7 @@ const UsersAvgMessagesCard = () => {
 
   return (
     <Card className="!standard-card-styling col-span-1">
-<<<<<<< Updated upstream
-      <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center xl:justify-between">
-=======
       <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center lg:justify-between">
->>>>>>> Stashed changes
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Avg. Messages by User
         </CardTitle>
@@ -37,7 +35,7 @@ const UsersAvgMessagesCard = () => {
           averageLabel={{
             text: "Avg. Messages by User",
             value: 8,
-            icon: <MessageCircle />,
+            icon: <BiSolidMessageSquareDetail />,
           }}
           leftText="Message"
           bottomText="Time period"

@@ -6,7 +6,8 @@ import { DateRange } from "react-day-picker";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { ChartJsLineChart03 } from "@/components/charts/chartjs-line-charts";
 import { DateRangePicker } from "@/components/common/date-range-picker";
-import { MessageCircle } from "lucide-react";
+
+import { RiZzzLine } from "react-icons/ri";
 
 const UsersAvgInactivityCard = () => {
   const [date, setDate] = React.useState<DateRange | undefined>({
@@ -16,11 +17,7 @@ const UsersAvgInactivityCard = () => {
 
   return (
     <Card className="!standard-card-styling col-span-1">
-<<<<<<< Updated upstream
-      <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center xl:justify-between">
-=======
       <CardHeader className="xl:py-4 py-6 border-b border-border flex xl:flex-row flex-col max-xl:gap-8 items-center lg:justify-between">
->>>>>>> Stashed changes
         <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
           Avg. Inactivity by User
         </CardTitle>
@@ -35,9 +32,9 @@ const UsersAvgInactivityCard = () => {
             values: [150, 60, 40, 25, 30, 20, 18],
           }}
           averageLabel={{
-            text: "Avg. Messages by User",
-            value: 8,
-            icon: <MessageCircle />, 
+            text: "Avg. Innactivity",
+            value: 29,
+            icon: <RiZzzLine />, 
           }}
           leftText="Inactivity (seconds)"
           bottomText="Time Period"

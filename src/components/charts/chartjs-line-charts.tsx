@@ -27,8 +27,6 @@ import {
 } from "chart.js";
 import { Line } from "react-chartjs-2";
 
-import zoomPlugin from "chartjs-plugin-zoom";
-
 ChartJS.register(
   CategoryScale,
   LinearScale,
@@ -38,7 +36,6 @@ ChartJS.register(
   Title,
   Tooltip,
   Legend,
-  zoomPlugin
 );
 
 export const ChartJsLineChart01 = ({ chartData }: ChartJsLineChart01Props) => {
@@ -138,6 +135,7 @@ export const ChartJsLineChart03 = ({
         borderWidth: 2,
         pointBackgroundColor: "rgba(54, 162, 235, 1)",
         fill: false,
+        pointRadius: 0,
       },
     ],
   };
@@ -147,17 +145,17 @@ export const ChartJsLineChart03 = ({
   return (
     <div className="relative w-full h-[450px]">
       <Line data={chartData} options={options} />
-      <div className="absolute top-6 right-10 flex items-center space-x-2 bg-white shadow-md rounded-lg p-3">
+      <div className="absolute top-6 right-10 flex items-center max-lg:gap-2 xl:flex-row flex-col space-x-2 bg-white dark:bg-background-color dark:border dark:border-border shadow-md rounded-lg p-3">
         {averageLabel.icon && (
           <span className="w-10 h-10 flex items-center justify-center bg-[#976CDD] rounded-full">
             <span className="text-white">{averageLabel.icon}</span>
           </span>
         )}
-        <div>
-          <div className="text-sm font-bold text-gray-600">
+        <div className="text-center">
+          <div className="md:text-[14px] text-[12px] font-inter  text-heading-color">
             {averageLabel.text}
           </div>
-          <div className="text-lg font-semibold text-gray-800">
+          <div className="md:text-[16px] text-[14px] font-bold">
             {averageLabel.value}
           </div>
         </div>

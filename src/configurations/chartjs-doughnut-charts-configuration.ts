@@ -33,7 +33,7 @@ export const ChartJsDoughnutChart02Cofigurations =
             color: isDarkTheme ? "#ffffff" : "#000000",
             usePointStyle: true,
             pointStyle: "circle",
-            padding: 20,
+            padding: 25,
             font: {
               family: "Inter",
               size: 14,
@@ -50,9 +50,9 @@ export const ChartJsDoughnutChart02Cofigurations =
           cornerRadius: 8,
           padding: 10,
           displayColors: false,
-          titleMarginBottom: 0,
+          titleColor: isDarkTheme ? "#000000" : "#ffffff",
           titleFont: {
-            size: 0,
+            size: 14,
           },
           bodyFont: {
             family: "Inter",
@@ -66,6 +66,10 @@ export const ChartJsDoughnutChart02Cofigurations =
               const value = tooltipItem.raw || 0;
               return `${label}: ${value}%`;
             },
+          },
+          animation: {
+            duration: 1000,
+            easing: "easeOutCubic",
           },
         },
 
@@ -120,3 +124,4 @@ export const ChartJsDoughnutChart03Configurations =
       },
     };
   };
+ 

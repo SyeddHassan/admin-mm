@@ -16,6 +16,8 @@ const AudienceTrafficPage = () => {
       </div>
 
       <TrafficTimeDaysCard />
+
+      
     </main>
   );
 };
