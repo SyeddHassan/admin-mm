@@ -22,7 +22,7 @@ const ActiveUsersSessionTimeCard = () => {
       </CardHeader>
 
       {/* ACTIVE USERS AND SESSIONS BAR CHART */}
-      <CardContent className="py-5 flex gap-12 flex-col">
+      <CardContent className="py-12">
         <ChartJsBarChart02
           data={{
             labels: [

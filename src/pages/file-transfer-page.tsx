@@ -25,6 +25,6 @@ const FileTransferPage = () => {
       </div>
     </main>
   );
-};
+}; 
 
 export default FileTransferPage;

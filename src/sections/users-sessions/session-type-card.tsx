@@ -22,7 +22,7 @@ const SessionTypeCard = () => {
       </CardHeader>
 
       {/* SESSION TYPE DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto xl:h-[500px] xl:flex-center max-xl:py-12">
+      <CardContent className="mx-auto h-full flex-center max-xl:py-12">
         <ChartJsDoughnutChart02
           chartData={[
             { label: "Standard", percentage: 30, color: "#5ebce1" },

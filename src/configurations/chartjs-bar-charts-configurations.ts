@@ -76,9 +76,13 @@ export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
         stacked: true,
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -88,11 +92,15 @@ export const ChartJsBarChart01Cofigurations = (): ChartOptions<"bar"> => {
         stacked: true,
         beginAtZero: true,
         ticks: {
-          stepSize: 50,
+          stepSize: 20,
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           color: isDarkTheme ? "#ffffff1a" : "#0000001a",
@@ -185,9 +193,13 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
       x: {
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -195,11 +207,15 @@ export const ChartJsBarChart02Cofigurations = (): ChartOptions<"bar"> => {
       },
       y: {
         ticks: {
-          stepSize: 50,
+          stepSize: 200,
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           color: isDarkTheme ? "#ffffff1a" : "#0000001a",
@@ -279,9 +295,13 @@ export const ChartJsBarChart03Cofigurations = (): ChartOptions<"bar"> => {
       x: {
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -289,17 +309,25 @@ export const ChartJsBarChart03Cofigurations = (): ChartOptions<"bar"> => {
         title: {
           display: true,
           text: "Hour of Day",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
       y: {
         beginAtZero: true,
         ticks: {
-          stepSize: 50,
+          stepSize: 1,
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           color: isDarkTheme ? "#ffffff1a" : "#0000001a",
@@ -307,6 +335,10 @@ export const ChartJsBarChart03Cofigurations = (): ChartOptions<"bar"> => {
         title: {
           display: true,
           text: "Avg. site sessions",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
       },
@@ -338,6 +370,7 @@ export const ChartJsBarChart04Cofigurations = (): ChartOptions<"bar"> => {
 
       y: {
         beginAtZero: true,
+
         ticks: {
           font: {
             family: "Inter",
@@ -347,7 +380,7 @@ export const ChartJsBarChart04Cofigurations = (): ChartOptions<"bar"> => {
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -503,7 +536,7 @@ export const ChartJsBarChart05Cofigurations = (): ChartOptions<"bar"> => {
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,

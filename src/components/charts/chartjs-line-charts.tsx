@@ -6,12 +6,14 @@ import {
   ChartJsLineChart01Props,
   ChartJsLineChart02Props,
   ChartJsLineChart03Props,
+  ChartJsLineChart04Props,
 } from "@/interfaces/analytics/chartjs-line-charts-interfaces";
 
 import {
   ChartJsLineChart01Cofigurations,
   ChartJsLineChart02Cofigurations,
   ChartJsLineChart03Cofigurations,
+  ChartJsLineChart04Cofigurations,
 } from "@/configurations/chartjs-line-charts-configurations";
 
 import {
@@ -35,7 +37,7 @@ ChartJS.register(
   Filler,
   Title,
   Tooltip,
-  Legend,
+  Legend
 );
 
 export const ChartJsLineChart01 = ({ chartData }: ChartJsLineChart01Props) => {
@@ -160,6 +162,33 @@ export const ChartJsLineChart03 = ({
           </div>
         </div>
       </div>
+    </div>
+  );
+};
+
+export const ChartJsLineChart04 = ({
+  data,
+  leftText,
+}: ChartJsLineChart04Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        data: data.values,
+        borderColor: "rgba(54, 162, 235, 1)",
+        borderWidth: 2,
+        pointBackgroundColor: "rgba(54, 162, 235, 1)",
+        fill: false,
+        pointRadius: 0,
+      },
+    ],
+  };
+
+  const options = ChartJsLineChart04Cofigurations(leftText);
+
+  return (
+    <div className="relative w-full h-[450px]">
+      <Line data={chartData} options={options} />
     </div>
   );
 };

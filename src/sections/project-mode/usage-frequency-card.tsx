@@ -24,29 +24,29 @@ const UsageFrequencyCard = () => {
       </CardHeader>
 
       {/* USAGE FREQUENCY LINE CHART */}
-      <CardContent className="py-12 xl:h-[650px] max-md:px-2">
+      <CardContent className="py-5">
         <ChartJsFrequencyChart01
           labels={[
-            "Feb '17",
+            "3 Feb",
             "5 Feb",
             "10 Feb",
             "15 Feb",
             "20 Feb",
             "25 Feb",
-            "Mar '17",
+            "2 Mar",
             "5 Mar",
             "10 Mar",
             "15 Mar",
             "20 Mar",
             "25 Mar",
-            "Apr '17",
+            "1 Apr",
             "5 Apr",
             "10 Apr",
             "15 Apr",
           ]}
           values={[
-            160, 170, 190, 200, 220, 180, 150, 120, 130, 140, 110, 90, 100, 120,
-            130, 140,
+            50, 75, 150, 250, 300, 220, 180, 90, 120, 200, 240, 180, 150, 170,
+            210, 230,
           ]}
         />
       </CardContent>

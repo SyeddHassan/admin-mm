@@ -23,8 +23,16 @@ export interface ChartJsLineChart03Props {
   averageLabel: {
     text: string;
     value: number;
-    icon?: React.ReactNode; // Allow React components for icons
-  }; 
+    icon?: React.ReactNode;
+  };
   leftText: string;
-  bottomText: string; 
+  bottomText: string;
+}
+
+export interface ChartJsLineChart04Props {
+  data: {
+    labels: string[];
+    values: number[];
+  };
+  leftText: string;
 }

@@ -34,7 +34,7 @@ const TrafficTimeDaysCard = () => {
       </CardHeader>
 
       {/* TRAFFIC BY TIME OF DAYS HEATMAP & BAR CHART */}
-      <CardContent className="py-5 h-[700px] flex gap-4 flex-col">
+      <CardContent className="py-5 flex gap-4 flex-col">
         <FilterButtons04
           selectedTab={selectedTab}
           setSelectedTab={setSelectedTab}

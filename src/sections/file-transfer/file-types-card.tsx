@@ -7,7 +7,7 @@ import { ChartJsPieChart01 } from "@/components/charts/chartjs-pie-charts";
 import DatePicker from "@/components/common/date-picker";
 
 const FileTypesCard = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>( 
     new Date()
   );
 

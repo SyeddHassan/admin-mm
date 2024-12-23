@@ -41,14 +41,19 @@ export const ChartJsFrequencyChart01 = ({
         label: "Usage (times)",
         data: values,
         fill: true,
-        backgroundColor: "rgba(75,192,192,0.2)",
-        borderColor: "rgba(75,192,192,1)",
-        tension: 0,
+        backgroundColor: "rgba(0, 123, 255, 0.2)",
+        borderColor: "rgba(0, 123, 255, 1)",
+        tension: 0.2,
+        pointRadius: 0,
       },
     ],
   };
 
   const options = ChartJsFrequencyChart01Cofigurations();
 
-  return <Line data={data} options={options} />;
+  return (
+    <div className="relative w-full h-full">
+      <Line data={data} options={options} />
+    </div>
+  );
 };

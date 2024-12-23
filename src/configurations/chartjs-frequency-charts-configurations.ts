@@ -61,9 +61,13 @@ export const ChartJsFrequencyChart01Cofigurations =
         x: {
           ticks: {
             color: isDarkTheme ? "#ffffff" : "#000000",
+            font: {
+              family: "Inter",
+              size: 14,
+            },
           },
           border: {
-            color: isDarkTheme ? "#ffffff" : "#000000",
+            color: isDarkTheme ? "#000000" : "#ffffff",
           },
           grid: {
             display: false,
@@ -72,14 +76,19 @@ export const ChartJsFrequencyChart01Cofigurations =
         y: {
           grid: {
             color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+            
           },
           beginAtZero: true,
           ticks: {
-            stepSize: 50,
+            stepSize: 40,
             color: isDarkTheme ? "#ffffff" : "#000000",
+            font: {
+              family: "Inter",
+              size: 14,
+            },
           },
           border: {
-            color: isDarkTheme ? "#ffffff" : "#000000",
+            color: isDarkTheme ? "#000000" : "#ffffff",
           },
           title: {
             display: true,

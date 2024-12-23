@@ -79,9 +79,13 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
       x: {
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -93,10 +97,15 @@ export const ChartJsAreaChart01Cofigurations = (): ChartOptions<"line"> => {
         },
         beginAtZero: true,
         ticks: {
+          stepSize: 5,
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         title: {
           display: true,

@@ -88,7 +88,7 @@ export const ChartJsBarChart02 = ({ data }: ChartJsBarChart02Props) => {
   const options = ChartJsBarChart02Cofigurations();
 
   return (
-    <div className="relative w-full h-[450px]">
+    <div className="relative w-full h-[550px]">
       <Bar data={chartData} options={options} />
     </div>
   );
@@ -104,8 +104,8 @@ export const ChartJsBarChart03 = ({
       {
         label: "Values",
         data: values,
-        backgroundColor: "rgba(54, 162, 235, 0.5)",
-        borderColor: "rgba(54, 162, 235, 1)",
+        backgroundColor: "#2D88E5",
+        borderColor: "#2D88E5",
         borderWidth: 1,
       },
     ],
@@ -114,7 +114,7 @@ export const ChartJsBarChart03 = ({
   const options = ChartJsBarChart03Cofigurations();
 
   return (
-    <div className="relative w-full h-[600px] aspect-square mx-auto">
+    <div className="relative w-full h-full">
       <Bar data={chartData} options={options} />
     </div>
   );

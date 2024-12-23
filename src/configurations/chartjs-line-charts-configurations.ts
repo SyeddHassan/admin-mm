@@ -109,9 +109,13 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
       x: {
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -123,11 +127,15 @@ export const ChartJsLineChart02Cofigurations = (): ChartOptions<"line"> => {
         },
         beginAtZero: true,
         ticks: {
-          stepSize: 50,
+          stepSize: 5,
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         title: {
           display: true,
@@ -177,9 +185,13 @@ export const ChartJsLineChart03Cofigurations = (
       x: {
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
-          color: isDarkTheme ? "#ffffff" : "#000000",
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         grid: {
           display: false,
@@ -199,11 +211,91 @@ export const ChartJsLineChart03Cofigurations = (
           color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
         ticks: {
-          stepSize: 50,
+          stepSize: 30,
           color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
         },
         border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        title: {
+          display: true,
+          text: leftText,
+          font: {
+            family: "Inter",
+            size: 14,
+          },
           color: isDarkTheme ? "#ffffff" : "#000000",
+        },
+
+        beginAtZero: true,
+      },
+    },
+  };
+};
+
+export const ChartJsLineChart04Cofigurations = (
+  leftText: string
+): ChartOptions<"line"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    plugins: {
+      legend: {
+        display: false,
+      },
+
+      tooltip: {
+        enabled: false,
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+
+    layout: {
+      padding: {
+        bottom: 20,
+      },
+    },
+
+    scales: {
+      x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+        },
+        ticks: {
+          stepSize: 30,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
         },
         title: {
           display: true,
