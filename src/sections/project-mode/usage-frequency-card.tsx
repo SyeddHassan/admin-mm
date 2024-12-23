@@ -24,7 +24,7 @@ const UsageFrequencyCard = () => {
       </CardHeader>
 
       {/* USAGE FREQUENCY LINE CHART */}
-      <CardContent className="py-5">
+      <CardContent className="py-5 h-[600px]">
         <ChartJsFrequencyChart01
           labels={[
             "3 Feb",

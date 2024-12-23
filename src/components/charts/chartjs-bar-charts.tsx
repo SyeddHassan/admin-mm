@@ -125,7 +125,7 @@ export const ChartJsBarChart04 = ({ data }: ChartJsBarChart04Props) => {
     labels: data.labels,
     datasets: [
       {
-        label: "Traffic",
+        label: "Value",
         data: data.values,
         backgroundColor: "#2D88E5",
         borderWidth: 0,
