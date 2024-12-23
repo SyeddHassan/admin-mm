@@ -8,6 +8,7 @@ export const ChartJsFrequencyChart01Cofigurations =
 
     return {
       responsive: true,
+      maintainAspectRatio: false,
       plugins: {
         legend: {
           display: false,
@@ -65,6 +66,8 @@ export const ChartJsFrequencyChart01Cofigurations =
               family: "Inter",
               size: 14,
             },
+            autoSkip: true,
+            maxTicksLimit: 10,
           },
           border: {
             color: isDarkTheme ? "#000000" : "#ffffff",
@@ -76,7 +79,6 @@ export const ChartJsFrequencyChart01Cofigurations =
         y: {
           grid: {
             color: isDarkTheme ? "#ffffff1a" : "#0000001a",
-            
           },
           beginAtZero: true,
           ticks: {

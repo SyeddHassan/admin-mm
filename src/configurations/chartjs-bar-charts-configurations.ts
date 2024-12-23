@@ -241,6 +241,7 @@ export const ChartJsBarChart03Cofigurations = (): ChartOptions<"bar"> => {
 
   return {
     responsive: true,
+    maintainAspectRatio: false,
     plugins: {
       legend: {
         display: false,
@@ -541,6 +542,109 @@ export const ChartJsBarChart05Cofigurations = (): ChartOptions<"bar"> => {
         grid: {
           display: false,
         },
+      },
+    },
+  };
+};
+
+export const ChartJsBarChart06Cofigurations = (): ChartOptions<"bar"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 20,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        position: "top" as const,
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          pointStyleWidth: 10,
+          boxHeight: 7,
+          padding: 25,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+            weight: "normal",
+          },
+        },
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
+        footerColor: isDarkTheme ? "#000000" : "#ffffff",
+        padding: 10,
+        cornerRadius: 5,
+        boxWidth: 10,
+        boxHeight: 10,
+        displayColors: false,
+        bodyFont: {
+          family: "Jetbrains mono",
+          size: 12,
+          weight: "normal",
+        },
+        titleFont: {
+          family: "Inter",
+          size: 14,
+          weight: "bold",
+        },
+        footerFont: {
+          family: "Inter",
+          size: 12,
+          weight: "normal",
+        },
+        caretSize: 5,
+        caretPadding: 10,
+        animation: {
+          duration: 1000,
+          easing: "easeOutCubic",
+        },
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+    layout: {
+      padding: {
+        bottom: 20,
       },
     },
   };

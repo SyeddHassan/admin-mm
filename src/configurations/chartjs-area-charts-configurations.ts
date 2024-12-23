@@ -197,6 +197,7 @@ export const ChartJsAreaChart02Cofigurations = (): ChartOptions<"line"> => {
         grid: {
           color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
+
         beginAtZero: true,
         ticks: {
           stepSize: 2,

@@ -8,6 +8,7 @@ import {
   ChartJsBarChart03Props,
   ChartJsBarChart04Props,
   ChartJsBarChart05Props,
+  ChartJsBarChart06Props,
 } from "@/interfaces/analytics/chartjs-bar-charts-interfaces";
 
 import {
@@ -16,6 +17,7 @@ import {
   ChartJsBarChart03Cofigurations,
   ChartJsBarChart04Cofigurations,
   ChartJsBarChart05Cofigurations,
+  ChartJsBarChart06Cofigurations,
 } from "@/configurations/chartjs-bar-charts-configurations";
 
 import { Bar } from "react-chartjs-2";
@@ -114,7 +116,7 @@ export const ChartJsBarChart03 = ({
   const options = ChartJsBarChart03Cofigurations();
 
   return (
-    <div className="relative w-full h-full">
+    <div className=" w-full h-full min-h-[700px]">
       <Bar data={chartData} options={options} />
     </div>
   );
@@ -138,7 +140,7 @@ export const ChartJsBarChart04 = ({ data }: ChartJsBarChart04Props) => {
   const options = ChartJsBarChart04Cofigurations();
 
   return (
-    <div className="relative w-full h-full aspect-square mx-auto">
+    <div className="relative w-full h-full">
       <Bar data={chartData} options={options} />
     </div>
   );
@@ -176,4 +178,27 @@ export const ChartJsBarChart05 = ({ data }: ChartJsBarChart05Props) => {
       <Bar data={chartData} options={options} />
     </div>
   );
+};
+
+export const ChartJsBarChart06 = ({ data }: ChartJsBarChart06Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: [
+      {
+        label: "Sessions",
+        data: data.sessions,
+        backgroundColor: "rgb(52, 211, 153)", 
+        borderRadius: 4,
+      },
+      {
+        label: "Project Mode Activation",
+        data: data.activations,
+        backgroundColor: "rgb(251, 191, 36)", 
+        borderRadius: 4,
+      },
+    ],
+  };
+
+  const options = ChartJsBarChart06Cofigurations();
+  return <Bar data={chartData} options={options} />;
 };

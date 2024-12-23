@@ -29,6 +29,10 @@ export const RealTimeMap = ({
         panY: "translateY",
         projection: am5map.geoMercator(),
         pinchZoom: false,
+        wheelSensitivity: 0.5,
+        maxZoomLevel: 32,
+        minZoomLevel: 1,
+        wheelY: "zoom"
       })
     );
 
@@ -63,6 +67,7 @@ export const RealTimeMap = ({
         scatterDistance: 90,
         scatterRadius: 90,
         stopClusterZoom: 0.5,
+        calculateAggregates: true
       })
     );
 
@@ -225,7 +230,7 @@ export const RealTimeMap = ({
     if (selectedCountry && chartInstance.current) {
       const { longitude, latitude } = selectedCountry;
 
-      chartInstance.current.zoomToGeoPoint({ longitude, latitude }, 16, true);
+      chartInstance.current.zoomToGeoPoint({ longitude, latitude }, 12, true, 1000);
     }
   }, [selectedCountry]);
 

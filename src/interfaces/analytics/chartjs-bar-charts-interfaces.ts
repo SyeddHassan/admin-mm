@@ -33,3 +33,11 @@ export interface ChartJsBarChart05Props {
     chatCreations: number;
   }[];
 }
+
+export interface ChartJsBarChart06Props {
+  data: {
+    labels: string[];
+    sessions: number[];
+    activations: number[];
+  };
+}

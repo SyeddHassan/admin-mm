@@ -26,7 +26,7 @@ const TranscriptDownloadCard = () => {
       </CardHeader>
 
       {/* TRANSCRIPT DOWNLOAD DOUGHNUT CHART */}
-      <CardContent className="md:h-[550px] h-full max-md:pb-[5rem] flex-center mx-auto">
+      <CardContent className="h-[500px] md:h-[550px] max-md:pb-[5rem] flex-center mx-auto">
         <ChartJsDoughnutChart01
           backgroundColor={[
             "#f04c3d",
