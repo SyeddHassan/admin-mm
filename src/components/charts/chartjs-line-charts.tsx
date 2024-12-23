@@ -8,6 +8,9 @@ import {
   ChartJsLineChart03Props,
   ChartJsLineChart04Props,
   ChartJsLineChart05Props,
+  ChartJsLineChart06Props,
+  ChartJsLineChart07Props,
+  ChartJsLineChart08Props,
 } from "@/interfaces/analytics/chartjs-line-charts-interfaces";
 
 import {
@@ -16,6 +19,9 @@ import {
   ChartJsLineChart03Cofigurations,
   ChartJsLineChart04Cofigurations,
   ChartJsLineChart05Cofigurations,
+  ChartJsLineChart06Cofigurations,
+  ChartJsLineChart07Cofigurations,
+  ChartJsLineChart08Cofigurations,
 } from "@/configurations/chartjs-line-charts-configurations";
 
 import {
@@ -217,4 +223,96 @@ export const ChartJsLineChart05 = ({ data }: ChartJsLineChart05Props) => {
       <Line data={chartData} options={options} />
     </div>
   );
+};
+
+export const ChartJsLineChart06 = ({ data }: ChartJsLineChart06Props) => {
+  const chartData = {
+    labels: data.labels,
+    datasets: data.datasets.map((dataset) => ({
+      ...dataset,
+      backgroundColor: (context: any) => {
+        const ctx = context.chart.ctx;
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        gradient.addColorStop(0, "rgba(75, 192, 192, 0.5)");
+        gradient.addColorStop(1, "rgba(75, 192, 192, 0)");
+        return gradient;
+      },
+      fill: true,
+      pointBackgroundColor: "rgba(75, 192, 192, 1)",
+      pointBorderColor: "#fff",
+      pointHoverBackgroundColor: "#fff",
+      pointHoverBorderColor: "rgba(75, 192, 192, 1)",
+    })),
+  };
+
+  const options = ChartJsLineChart06Cofigurations();
+
+  return <Line options={options} data={chartData} className="w-full h-full" />;
+};
+
+export const ChartJsLineChart07 = ({ data }: ChartJsLineChart07Props) => {
+  const colorPairs = [
+    {
+      border: "rgb(255, 99, 132)",
+      gradient: ["rgba(255, 99, 132, 0.4)", "rgba(255, 99, 132, 0)"],
+    },
+  ];
+
+  const chartData = {
+    labels: data.labels,
+    datasets: data.datasets.map((dataset, index) => ({
+      ...dataset,
+      borderColor: colorPairs[index % colorPairs.length].border,
+      backgroundColor: (context: any) => {
+        const ctx = context.chart.ctx;
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        const colors = colorPairs[index % colorPairs.length].gradient;
+        gradient.addColorStop(0, colors[0]);
+        gradient.addColorStop(1, colors[1]);
+        return gradient;
+      },
+      fill: true,
+      pointBackgroundColor: colorPairs[index % colorPairs.length].border,
+      pointBorderColor: "#fff",
+      pointHoverBackgroundColor: "#fff",
+      pointHoverBorderColor: colorPairs[index % colorPairs.length].border,
+    })),
+  };
+
+  const options = ChartJsLineChart07Cofigurations();
+  return <Line options={options} data={chartData} className="w-full h-full" />;
+};
+
+export const ChartJsLineChart08 = ({ data }: ChartJsLineChart08Props) => {
+  const colorPairs = [
+    {
+      border: "rgb(147, 51, 234)",
+      gradient: ["rgba(147, 51, 234, 0.4)", "rgba(147, 51, 234, 0)"],
+    },  
+  ];
+
+  const chartData = {
+    labels: data.labels,
+    datasets: data.datasets.map((dataset, index) => ({
+      ...dataset,
+      borderColor: colorPairs[index % colorPairs.length].border,
+      backgroundColor: (context: any) => {
+        const ctx = context.chart.ctx;
+        const gradient = ctx.createLinearGradient(0, 0, 0, 400);
+        const colors = colorPairs[index % colorPairs.length].gradient;
+        gradient.addColorStop(0, colors[0]);
+        gradient.addColorStop(1, colors[1]);
+        return gradient;
+      },
+      fill: true,
+      pointBackgroundColor: colorPairs[index % colorPairs.length].border,
+      pointBorderColor: "#fff",
+      pointHoverBackgroundColor: "#fff",
+      pointHoverBorderColor: colorPairs[index % colorPairs.length].border,
+    })),
+  };
+
+  const options = ChartJsLineChart08Cofigurations();
+
+  return <Line options={options} data={chartData} className="w-full h-full" />;
 };

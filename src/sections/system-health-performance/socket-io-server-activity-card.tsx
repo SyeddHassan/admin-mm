@@ -1,6 +1,7 @@
 import React from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { ChartJsLineChart08 } from "@/components/charts/chartjs-line-charts";
 
 const SocketIOServerActivityCard = () => {
   return (
@@ -12,7 +13,27 @@ const SocketIOServerActivityCard = () => {
       </CardHeader>
 
       {/* SOCKET IO SERVER ACTIVITY FREQUENCY CHART */}
-      <CardContent className="h-[550px]"></CardContent>
+      <CardContent className="h-[550px]">
+        <ChartJsLineChart08
+          data={{
+            labels: [
+              "00:00",
+              "00:10",
+              "00:20",
+              "00:30",
+              "00:40",
+              "00:50",
+              "01:00",
+            ],
+            datasets: [
+              {
+                label: "Active Connections",
+                data: [150, 165, 178, 170, 182, 168, 175],
+              },
+            ],
+          }}
+        />
+      </CardContent>
     </Card>
   );
 };

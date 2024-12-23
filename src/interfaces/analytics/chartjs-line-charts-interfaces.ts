@@ -43,3 +43,35 @@ export interface ChartJsLineChart05Props {
     values: number[];
   };
 }
+
+export interface ChartJsLineChart06Props {
+  data: {
+    labels: string[];
+    datasets: {
+      label: string;
+      data: number[];
+      borderColor: string;
+      backgroundColor: string;
+    }[];
+  };
+}
+
+export interface ChartJsLineChart07Props {
+  data: {
+    labels: string[];
+    datasets: {
+      label: string;
+      data: number[];
+    }[];
+  };
+}
+
+export interface ChartJsLineChart08Props {
+  data: {
+    labels: string[];
+    datasets: {
+      label: string;
+      data: number[];
+    }[];
+  };
+}
