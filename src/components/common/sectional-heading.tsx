@@ -5,7 +5,7 @@ import { SectionalHeadingProps } from "@/interfaces/common-components-interface"
 import { cn } from "@/lib/utils";
 
 import { Separator } from "../ui/separator";
-// import NewCampaignButton from "../roots/advertisement-management/new-campaign-button";
+import NewCampaignButton from "../partials/advertisment-management/new-campaign-button";
 
 const SectionalHeading: React.FC<SectionalHeadingProps> = ({
   title,
@@ -32,8 +32,7 @@ const SectionalHeading: React.FC<SectionalHeadingProps> = ({
             actionClassName
           )}
         >
-          {/* {showNewCampaign && <NewCampaignButton />} */}
-          {showNewCampaign && <>hey</>}
+          {showNewCampaign && <NewCampaignButton />}
         </div>
       </div>
 

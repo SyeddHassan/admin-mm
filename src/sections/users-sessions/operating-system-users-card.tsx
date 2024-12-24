@@ -12,7 +12,7 @@ const OperatingSystemUsersCard = () => {
   return (
     <Card className="!standard-card-styling lg:col-span-1 md:col-span-2 col-span-1 lg:order-3 md:order-2 order-3">
       <CardHeader className="lg:py-4 py-6 border-b border-border flex lg:flex-row flex-col max-lg:gap-8 items-center lg:justify-between">
-        <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-md:order-2">
+        <CardTitle className="font-inter font-medium text-heading-color text-[16px] leading-[18px] max-lg:order-2">
           Users by Operation System
         </CardTitle>
 

@@ -59,7 +59,8 @@ export const ChartJsDoughnutChart02Cofigurations =
             size: 12,
           },
           bodyColor: isDarkTheme ? "#000000" : "#ffffff",
-          caretSize: 0,
+          caretSize: 5,
+          caretPadding: 10,
           callbacks: {
             label: function (tooltipItem: TooltipItem<"doughnut">) {
               const label = tooltipItem.label || "";

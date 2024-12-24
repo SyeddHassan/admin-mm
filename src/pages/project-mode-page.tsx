@@ -20,15 +20,16 @@ const ProjectModePage = () => {
         <TranscriptDownloadCard />
       </div>
 
-      <div className="w-full grid md:grid-cols-4 grid-cols-1 lg:gap-4 gap-8">
-        <AvgSessionDurationProjectModeCard />
+      <AvgSessionDurationProjectModeCard />
+
+      <div className="w-full grid md:grid-cols-4 grid-cols-1 md:gap-4 gap-8">
         <ProjectModeDevicesCard />
         <ProjectModeOperatingSystemsCard />
       </div>
 
       <ProjectModeActivationsCard />
 
-      <div className="w-full grid lg:grid-cols-3 md:grid-cols-4 grid-cols-1 md:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-3 grid-cols-1 md:gap-4 gap-8">
         <ChatGPTPromptsCard />
         <ChatGPTDailyPeakTimeCard />
       </div>

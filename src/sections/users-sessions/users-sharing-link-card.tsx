@@ -3,11 +3,13 @@
 import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartJsPieChart01 } from "@/components/charts/chartjs-pie-charts";
 import DatePicker from "@/components/common/date-picker";
+import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
 
 const UsersSharingLinkCard = () => {
-  const [selectedDate, setSelectedDate] = useState<Date | undefined>(new Date()); 
+  const [selectedDate, setSelectedDate] = useState<Date | undefined>(
+    new Date()
+  );
 
   return (
     <Card className="!standard-card-styling col-span-1">
@@ -21,14 +23,14 @@ const UsersSharingLinkCard = () => {
 
       {/* USERS SHARING LINK PIE CHART */}
       <CardContent className="mx-auto lg:h-full lg:flex-center max-lg:py-12 px-0">
-        <ChartJsPieChart01
+        <ChartJsDoughnutChart02
           chartData={[
-            { label: "Message", percentage: 20, color: "#2285f2" },
-            { label: "Mail", percentage: 25, color: "#d83b82" },
+            { label: "Message", percentage: 20, color: "#5ebce1" },
+            { label: "Mail", percentage: 25, color: "#3a56af" },
             { label: "Whatsapp", percentage: 15, color: "#ab40e8" },
-            { label: "Telegram", percentage: 15, color: "#5e37ed" },
-            { label: "Instagram", percentage: 15, color: "#4dd992" },
-            { label: "Other", percentage: 20, color: "#f02f1d" },
+            { label: "Telegram", percentage: 15, color: "#e1d75e" },
+            { label: "Instagram", percentage: 15, color: "#e8a7b4" },
+            { label: "Other", percentage: 20, color: "#40e8a5" },
           ]}
         />
       </CardContent>

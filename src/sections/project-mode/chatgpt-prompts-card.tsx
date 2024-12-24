@@ -3,8 +3,8 @@
 import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartJsPieChart01 } from "@/components/charts/chartjs-pie-charts";
 import DatePicker from "@/components/common/date-picker";
+import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
 
 const ChatGPTPromptsCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
@@ -21,16 +21,16 @@ const ChatGPTPromptsCard = () => {
         <DatePicker date={selectedDate} setDate={setSelectedDate} />
       </CardHeader>
 
-      {/* CHATGPT PROMPTS PIE CHART */}
+      {/* CHATGPT PROMPTS DOUGHNUT CHART */}
       <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
-        <ChartJsPieChart01
+        <ChartJsDoughnutChart02
           chartData={[
             {
               label: "Advice & Guidance",
               percentage: 70,
-              color: "#2285f2",
+              color: "#5ebce1",
             },
-            { label: "Problem Solving", percentage: 30, color: "#d83b82" },
+            { label: "Problem Solving", percentage: 30, color: "#3a56af" },
             {
               label: "Creative Writing Assistance",
               percentage: 30,
@@ -39,10 +39,10 @@ const ChatGPTPromptsCard = () => {
             {
               label: "Entertainment & Fun",
               percentage: 40,
-              color: "#5e37ed",
+              color: "#e1d75e",
             },
-            { label: "Recommendations", percentage: 50, color: "#4dd992" },
-            { label: "Other", percentage: 50, color: "#f02f1d" },
+            { label: "Recommendations", percentage: 50, color: "#e8a7b4" },
+            { label: "Other", percentage: 50, color: "#40e8a5" },
           ]}
         />
       </CardContent>
