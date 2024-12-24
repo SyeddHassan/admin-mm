@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { FilterButtons05 } from "@/components/common/filter-buttons";
+import AdvertisementCampaignsTable from "@/components/tables/advertisement-campaigns-table";
 
 const AdvertisementCampaignsCard = () => {
   const [selectedTab, setSelectedTab] = useState("View All");
@@ -26,6 +27,10 @@ const AdvertisementCampaignsCard = () => {
         />
 
         {/* ADVERTISEMENTS CAMPAGIGNS TABLE */}
+        <AdvertisementCampaignsTable
+          selectedTab={selectedTab}
+          filteredInput={filteredInput}
+        />
       </CardContent>
     </Card>
   );
