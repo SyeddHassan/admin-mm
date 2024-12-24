@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DatePicker from "@/components/common/date-picker";
-import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
+import { ChartJsDoughnutChart04 } from "@/components/charts/chartjs-doughnut-charts";
 
 const ChatGPTPromptsCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
@@ -23,7 +23,8 @@ const ChatGPTPromptsCard = () => {
 
       {/* CHATGPT PROMPTS DOUGHNUT CHART */}
       <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
-        <ChartJsDoughnutChart02
+        <div className="w-full max-w-[470px]">
+        <ChartJsDoughnutChart04
           chartData={[
             {
               label: "Advice & Guidance",
@@ -45,6 +46,7 @@ const ChatGPTPromptsCard = () => {
             { label: "Other", percentage: 50, color: "#40e8a5" },
           ]}
         />
+        </div>
       </CardContent>
     </Card>
   );

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DatePicker from "@/components/common/date-picker";
-import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
+import { ChartJsDoughnutChart04 } from "@/components/charts/chartjs-doughnut-charts";
 
 const UsersSharingLinkCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
@@ -22,8 +22,9 @@ const UsersSharingLinkCard = () => {
       </CardHeader>
 
       {/* USERS SHARING LINK PIE CHART */}
-      <CardContent className="mx-auto lg:h-full lg:flex-center max-lg:py-12 px-0">
-        <ChartJsDoughnutChart02
+      <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center px-0">
+       <div className="w-full max-w-[400px]">
+       <ChartJsDoughnutChart04
           chartData={[
             { label: "Message", percentage: 20, color: "#5ebce1" },
             { label: "Mail", percentage: 25, color: "#3a56af" },
@@ -33,6 +34,7 @@ const UsersSharingLinkCard = () => {
             { label: "Other", percentage: 20, color: "#40e8a5" },
           ]}
         />
+       </div>
       </CardContent>
     </Card>
   );

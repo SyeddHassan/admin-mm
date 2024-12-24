@@ -7,12 +7,14 @@ import {
   ChartJsDoughnutChart01Props,
   ChartJsDoughnutChart02Props,
   ChartJsDoughnutChart03ChartContextType,
+  ChartJsDoughnutChart04Props,
 } from "@/interfaces/analytics/chartjs-doughnut-charts-interfaces";
 
 import {
   ChartJsDoughnutChart01Cofigurations,
   ChartJsDoughnutChart02Cofigurations,
   ChartJsDoughnutChart03Configurations,
+  ChartJsDoughnutChart04Cofigurations,
 } from "@/configurations/chartjs-doughnut-charts-configuration";
 
 import { Doughnut } from "react-chartjs-2";
@@ -75,7 +77,7 @@ export const ChartJsDoughnutChart01 = ({
 
 export const ChartJsDoughnutChart02 = ({
   chartData,
-}: ChartJsDoughnutChart02Props) => {
+}: ChartJsDoughnutChart04Props) => {
   const data = {
     labels: chartData.map((data) => data.label),
     datasets: [
@@ -149,6 +151,28 @@ export const ChartJsDoughnutChart03 = ({
           {percentage}%
         </span>
       </div>
+    </div>
+  );
+};
+
+export const ChartJsDoughnutChart04 = ({
+  chartData,
+}: ChartJsDoughnutChart02Props) => {
+  const data = {
+    labels: chartData.map((data) => data.label),
+    datasets: [
+      {
+        data: chartData.map((data) => data.percentage),
+        backgroundColor: chartData.map((data) => data.color),
+      },
+    ],
+  };
+
+  const options = ChartJsDoughnutChart04Cofigurations();
+
+  return (
+    <div className="relative mx-auto aspect-square w-full">
+      <Doughnut data={data} options={options} />
     </div>
   );
 };

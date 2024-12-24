@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DatePicker from "@/components/common/date-picker";
-import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
+import { ChartJsDoughnutChart04 } from "@/components/charts/chartjs-doughnut-charts";
 
 const FileTypesCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>( 
@@ -23,7 +23,8 @@ const FileTypesCard = () => {
 
       {/* FILE TYPES PIE CHART */}
       <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
-        <ChartJsDoughnutChart02
+        <div className="w-full max-w-[450px]">
+        <ChartJsDoughnutChart04
           chartData={[
             { label: "Image", percentage: 50, color: "#5ebce1" },
             { label: "Audio", percentage: 30, color: "#3a56af" },
@@ -33,6 +34,7 @@ const FileTypesCard = () => {
             { label: "Other", percentage: 19, color: "#40e8a5" },
           ]}
         />
+        </div>
       </CardContent>
     </Card>
   );

@@ -4,7 +4,7 @@ import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DatePicker from "@/components/common/date-picker";
-import { ChartJsDoughnutChart02 } from "@/components/charts/chartjs-doughnut-charts";
+import { ChartJsDoughnutChart04 } from "@/components/charts/chartjs-doughnut-charts";
 
 const BroswerUsersCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
@@ -23,15 +23,17 @@ const BroswerUsersCard = () => {
 
       {/* BROWSER USERS DOUGHNUT CHART */}
       <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
-        <ChartJsDoughnutChart02
-          chartData={[
-            { label: "Chrome", percentage: 20, color: "#5ebce1" },
-            { label: "Safari", percentage: 25, color: "#3a56af" },
-            { label: "Firefox", percentage: 15, color: "#ab40e8" },
-            { label: "Explorer", percentage: 15, color: "#e1d75e" },
-            { label: "Other", percentage: 20, color: "#e8a7b4" },
-          ]}
-        />
+        <div className="w-full max-w-[400px]">
+          <ChartJsDoughnutChart04
+            chartData={[
+              { label: "Chrome", percentage: 20, color: "#5ebce1" },
+              { label: "Safari", percentage: 25, color: "#3a56af" },
+              { label: "Firefox", percentage: 15, color: "#ab40e8" },
+              { label: "Explorer", percentage: 15, color: "#e1d75e" },
+              { label: "Other", percentage: 20, color: "#e8a7b4" },
+            ]}
+          />
+        </div>
       </CardContent>
     </Card>
   );

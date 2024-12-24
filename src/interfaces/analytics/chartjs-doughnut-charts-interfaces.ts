@@ -18,3 +18,7 @@ export type ChartJsDoughnutChart03ChartContextType =
       chartArea?: ChartArea;
     };
   };
+
+export interface ChartJsDoughnutChart04Props {
+  chartData: { label: string; percentage: number; color: string }[];
+}

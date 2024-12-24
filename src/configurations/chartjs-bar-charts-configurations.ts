@@ -429,9 +429,15 @@ export const ChartJsBarChart04Cofigurations = (): ChartOptions<"bar"> => {
 
       datalabels: {
         display: true,
-        align: "start",
-        anchor: "end",
-        offset: -25,
+        align: (context) => {
+          return context.chart.width < 768 ? "center" : "start";
+        },
+        anchor: (context) => {
+          return context.chart.width < 768 ? "center" : "end";
+        },
+        offset: (context) => {
+          return context.chart.width < 768 ? 0 : -24;
+        },
         color: isDarkTheme ? "#ffffff" : "#000000",
         font: {
           family: "Jetbrains mono",
@@ -503,9 +509,15 @@ export const ChartJsBarChart05Cofigurations = (): ChartOptions<"bar"> => {
       },
       datalabels: {
         display: true,
-        align: "start",
-        anchor: "end",
-        offset: -24,
+        align: (context) => {
+          return context.chart.width < 768 ? "center" : "start";
+        },
+        anchor: (context) => {
+          return context.chart.width < 768 ? "center" : "end";
+        },
+        offset: (context) => {
+          return context.chart.width < 768 ? 0 : -24;
+        },
         color: isDarkTheme ? "#ffffff" : "#000000",
         font: {
           family: "Jetbrains mono",
