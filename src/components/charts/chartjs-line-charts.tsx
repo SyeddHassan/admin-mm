@@ -239,10 +239,7 @@ export const ChartJsLineChart06 = ({ data }: ChartJsLineChart06Props) => {
         return gradient;
       },
       fill: true,
-      pointBackgroundColor: "rgba(75, 192, 192, 1)",
-      pointBorderColor: "#fff",
-      pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: "rgba(75, 192, 192, 1)",
+      pointRadius: 0,
     })),
   };
 
@@ -273,10 +270,7 @@ export const ChartJsLineChart07 = ({ data }: ChartJsLineChart07Props) => {
         return gradient;
       },
       fill: true,
-      pointBackgroundColor: colorPairs[index % colorPairs.length].border,
-      pointBorderColor: "#fff",
-      pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: colorPairs[index % colorPairs.length].border,
+      pointRadius: 0,
     })),
   };
 
@@ -306,10 +300,7 @@ export const ChartJsLineChart08 = ({ data }: ChartJsLineChart08Props) => {
         return gradient;
       },
       fill: true,
-      pointBackgroundColor: colorPairs[index % colorPairs.length].border,
-      pointBorderColor: "#fff",
-      pointHoverBackgroundColor: "#fff",
-      pointHoverBorderColor: colorPairs[index % colorPairs.length].border,
+      pointRadius: 0,
     })),
   };
 

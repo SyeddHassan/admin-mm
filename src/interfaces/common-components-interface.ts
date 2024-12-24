@@ -43,9 +43,18 @@ export interface DatePickerProps {
   date: Date | undefined;
   setDate: (date: Date | undefined) => void;
 }
-
 export interface DateRangePickerProps {
   className?: string;
   date: DateRange | undefined;
   setDate: React.Dispatch<React.SetStateAction<DateRange | undefined>>;
+}
+
+// CUSTOM INPUT
+export interface CustomInputProps {
+  htmlFor: string;
+  label: string;
+  inputId: string;
+  placeholderText?: string;
+  value: string | number;
+  onChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
 }

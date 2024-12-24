@@ -12,11 +12,15 @@ import {
   DialogTrigger,
 } from "@/components/ui/dialog";
 import { Separator } from "@/components/ui/separator";
-import NewCampaignForm from "./new-campaign-form";
+import NewCampaignForm from "../../forms/new-campaign-form";
 
 const NewCampaignButton = () => {
   const [selectedTab, setSelectedTab] = useState("textCampaign");
   const [charCount, setCharCount] = useState(0);
+
+  const [clientName, setClientName] = useState("");
+  const [campaignTitle, setCampaignTitle] = useState("");
+  const [linkOnClick, setLinkOnClick] = useState("");
 
   return (
     <Dialog>
@@ -26,7 +30,10 @@ const NewCampaignButton = () => {
         </Button>
       </DialogTrigger>
 
-      <DialogContent className="max-w-[1536px] w-[90%] h-[90%] bg-white border-border dark:bg-background-color flex flex-col justify-between rounded-[6px]">
+      <DialogContent
+        aria-describedby={undefined}
+        className="max-w-[1536px] w-[90%] h-[90%] bg-white border-border dark:bg-background-color flex flex-col justify-between rounded-[6px]"
+      >
         <DialogHeader className="md:h-[80px] h-[60px] flex flex-col justify-center gap-2">
           <DialogTitle className="md:text-[44px] text-[28px] text-secondary-theme font-inter font-bold md:leading-[50px] leading-[34px] text-start md:px-4">
             New Campaign
@@ -39,11 +46,21 @@ const NewCampaignButton = () => {
           setSelectedTab={setSelectedTab}
           charCount={charCount}
           setCharCount={setCharCount}
+          clientName={clientName}
+          setClientName={setClientName}
+          campaignTitle={campaignTitle}
+          setCampaignTitle={setCampaignTitle}
+          linkOnClick={linkOnClick}
+          setLinkOnClick={setLinkOnClick}
         />
 
         <DialogFooter className="md:h-[80px] h-[130px] flex !flex-col !justify-center gap-4">
           <Separator className="h-[2px]" />
-          <div className="md:px-4 flex items-center md:justify-end md:flex-row flex-col max-md:gap-4">
+          <div className="md:px-4 flex md:justify-between md:flex-row flex-col max-md:gap-4">
+            <p className="font-inter text-[12px] font-semibold">
+              Campaign ends on: 2024, Jan 14
+            </p>
+
             <div className="flex items-center max-md:w-full gap-2">
               <Button className="bg-background-color md:rounded-[200px] md:h-[56px] h-[46px] md:w-[183px] w-full font-inter font-medium text-[16px] text-heading-color border-border border hover:bg-general-hover">
                 Cancel

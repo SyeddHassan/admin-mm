@@ -8,16 +8,23 @@ import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
 import { Separator } from "@/components/ui/separator";
 
-import AdvertisementManagementSystemNewCampaignImg01 from "../../../../public/images/advertisement-management-system-new-campaign-img-01.png";
-import AdvertisementManagementSystemNewCampaignImg02 from "../../../../public/images/advertisement-management-system-new-campaign-img-02.png";
+import AdvertisementManagementSystemNewCampaignImg01 from "../../../public/images/advertisement-management-system-new-campaign-img-01.png";
+import AdvertisementManagementSystemNewCampaignImg02 from "../../../public/images/advertisement-management-system-new-campaign-img-02.png";
 import { MdPermMedia } from "react-icons/md";
 import { Upload } from "lucide-react";
+import CustomInput from "../common/custom-input";
 
 interface NewCampaignFormProps {
   selectedTab: string;
   setSelectedTab: React.Dispatch<React.SetStateAction<string>>;
   charCount: number;
   setCharCount: React.Dispatch<React.SetStateAction<number>>;
+  clientName: string;
+  setClientName: React.Dispatch<React.SetStateAction<string>>;
+  campaignTitle: string;
+  setCampaignTitle: React.Dispatch<React.SetStateAction<string>>;
+  linkOnClick: string;
+  setLinkOnClick: React.Dispatch<React.SetStateAction<string>>;
 }
 
 const NewCampaignForm = ({
@@ -25,6 +32,12 @@ const NewCampaignForm = ({
   setSelectedTab,
   charCount,
   setCharCount,
+  clientName,
+  setClientName,
+  campaignTitle,
+  setCampaignTitle,
+  linkOnClick,
+  setLinkOnClick,
 }: NewCampaignFormProps) => {
   const handleInputChange = (e: React.ChangeEvent<HTMLInputElement>) => {
     const charCount = e.target.value.length;
@@ -104,40 +117,27 @@ const NewCampaignForm = ({
         </h1>
 
         {/* CLIENT NAME FIELD */}
-        <div className="flex flex-col gap-2">
-          <Label
-            htmlFor="campaign-name"
-            className="text-[16px] leading-[22px] font-inter font-semibold text-heading-color"
-          >
-            Client Name
-          </Label>
-          <Input
-            id="campaign-title"
-            placeholder="ex: twitch"
-            className="h-[50px] rounded-[10px] focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0 duration-200 transition-all"
-          />
-        </div>
+        <CustomInput
+          htmlFor="campaign-name"
+          label="Client Name"
+          inputId="campaign-name"
+          placeholderText="ex: twitch"
+          value={clientName}
+          onChange={(e) => setClientName(e.target.value)}
+        />
 
         {/* CAMPAIGN TITLE FIELD */}
-        <div className="flex flex-col gap-2">
-          <div className="w-full flex items-center justify-between">
-            <Label
-              htmlFor="campaign-title"
-              className="text-[16px] leading-[22px] font-inter font-semibold text-heading-color"
-            >
-              Campaign Title
-            </Label>
-
-            <p className="text-[14px] leading-[24px]">{charCount} characters</p>
-          </div>
-
-          <Input
-            id="campaign-title"
-            placeholder="ex: Big Sale on at Flight..."
-            className="h-[50px] rounded-[10px] focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0 duration-200 transition-all"
-            onChange={handleInputChange}
-          />
-        </div>
+        <CustomInput
+          htmlFor="campaign-title"
+          label="Campaign Title"
+          inputId="campaign-title"
+          placeholderText="ex: Big Sale on at Flight..."
+          value={campaignTitle}
+          onChange={(e) => {
+            setCampaignTitle(e.target.value);
+            handleInputChange(e);
+          }}
+        />
 
         {/* MULTI MEDIA CAMPAIGN UPLOAD FIELD */}
         {selectedTab === "multiMedia" && (
@@ -157,7 +157,7 @@ const NewCampaignForm = ({
                 <Upload className="h-4 w-4" />
                 Upload Multimedia
               </Button>
-              <p className="text-[16px] leading-[24px]">
+              <p className="lg:text-[16px] md:text-[14px] text-[12px] lg:leading-[24px] md:leading-[22px] leading-[20px] text-center px-4">
                 jpg/png/gif (Max 500KB) mp4 @720p (Max 1MB) / File Proportions:
                 198x164
               </p>
@@ -166,19 +166,14 @@ const NewCampaignForm = ({
         )}
 
         {/* LINK ON CLICK FIELD */}
-        <div className="flex flex-col gap-2">
-          <Label
-            htmlFor="campaign-link"
-            className="text-[16px] leading-[22px] font-inter font-semibold text-heading-color"
-          >
-            Link on Click
-          </Label>
-          <Input
-            id="campaign-link"
-            placeholder="ex: http://twitch.tv"
-            className="h-[50px] rounded-[10px] focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0 duration-200 transition-all"
-          />
-        </div>
+        <CustomInput
+          htmlFor="campaign-link"
+          label="Link on Click"
+          inputId="campaign-link"
+          placeholderText="ex: http://twitch.tv"
+          value={linkOnClick}
+          onChange={(e) => setLinkOnClick(e.target.value)}
+        />
       </div>
     </div>
   );
