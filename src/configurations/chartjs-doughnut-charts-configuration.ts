@@ -63,7 +63,7 @@ export const ChartJsDoughnutChart02Cofigurations =
           caretPadding: 10,
           callbacks: {
             label: function (tooltipItem: TooltipItem<"doughnut">) {
-              const label = tooltipItem.label || "";
+              const label = "Value";
               const value = tooltipItem.raw || 0;
               return `${label}: ${value}%`;
             },
@@ -171,7 +171,7 @@ export const ChartJsDoughnutChart04Cofigurations =
           caretPadding: 10,
           callbacks: {
             label: function (tooltipItem: TooltipItem<"doughnut">) {
-              const label = tooltipItem.label || "";
+              const label = "Value";
               const value = tooltipItem.raw || 0;
               return `${label}: ${value}%`;
             },

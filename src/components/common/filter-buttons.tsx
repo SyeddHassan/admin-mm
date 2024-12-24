@@ -5,6 +5,7 @@ import {
   FilterButtons02Props,
   FilterButtons03Props,
   FilterButtons04Props,
+  FilterButtons05Props,
 } from "@/interfaces/common-components-interface";
 
 import { Input } from "../ui/input";
@@ -43,7 +44,6 @@ export const FilterButtons01 = ({
 };
 
 export const FilterButtons02 = ({
-  isCampaign = false,
   selectedTab,
   setSelectedTab,
   filteredInput,
@@ -101,7 +101,7 @@ export const FilterButtons02 = ({
       {/* SEARCH  */}
       <div className="lg:w-fit md:w-[90%] w-full flex items-center gap-4">
         <Input
-          placeholder={`Search ${isCampaign ? "Campaign" : "Session"} ID`}
+          placeholder="Search Session ID"
           className="h-[40px] rounded-[6px] lg:w-[300px] w-full focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0 duration-200 transition-all"
           value={filteredInput}
           onChange={(e) => setFilteredInput(e.target.value)}
@@ -203,6 +203,95 @@ export const FilterButtons04 = ({
           }`}
         >
           Bar Chart
+        </Button>
+      </div>
+    </div>
+  );
+};
+
+export const FilterButtons05 = ({
+  selectedTab,
+  setSelectedTab,
+  filteredInput,
+  setFilteredInput,
+}: FilterButtons05Props) => {
+  return (
+    <div className="w-full flex items-center xl:justify-between xl:flex-row flex-col max-xl:gap-8">
+      {/* TABS */}
+      <div className="md:flex max-sm:w-full max-md:grid max-md:grid-cols-2 font-inter font-medium">
+        <Button
+          onClick={() => setSelectedTab("View All")}
+          className={`h-[40px] sm:w-[135px] w-full md:rounded-[6px_0_0_6px] border-border rounded-[6px_6px_0_0] border text-[14px] !shadow-button-shadow max-md:col-span-2 ${
+            selectedTab === "View All"
+              ? "bg-selected-color text-theme-heading-color"
+              : "bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover text-heading-color"
+          }`}
+        >
+          View All
+        </Button>
+
+        <Button
+          onClick={() => setSelectedTab("Everywhere")}
+          className={`h-[40px] sm:w-[135px] w-full rounded-[0] border-border border text-[14px] !shadow-button-shadow max-md:col-span-1 ${
+            selectedTab === "Everywhere"
+              ? "bg-selected-color text-theme-heading-color"
+              : "bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover text-heading-color"
+          }`}
+        >
+          Everywhere
+        </Button>
+
+        <Button
+          onClick={() => setSelectedTab("Standard")}
+          className={`h-[40px] sm:w-[135px] w-full rounded-[0] border-border border text-[14px] !shadow-button-shadow max-md:col-span-1 ${
+            selectedTab === "Standard"
+              ? "bg-selected-color text-theme-heading-color"
+              : "bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover text-heading-color"
+          }`}
+        >
+          Standard
+        </Button>
+
+        <Button
+          onClick={() => setSelectedTab("Secure")}
+          className={`h-[40px] sm:w-[135px] w-full md:rounded-[0] border-border rounded-[0_0_0_6px] border text-[14px] !shadow-button-shadow max-md:col-span-1 ${
+            selectedTab === "Secure"
+              ? "bg-selected-color text-theme-heading-color"
+              : "bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover text-heading-color"
+          }`}
+        >
+          Secure
+        </Button>
+
+        <Button
+          onClick={() => setSelectedTab("Wallet")}
+          className={`h-[40px] sm:w-[135px] w-full md:rounded-[0_6px_6px_0] border-border rounded-[0_0_6px_0] border text-[14px] !shadow-button-shadow max-md:col-span-1 ${
+            selectedTab === "Wallet"
+              ? "bg-selected-color text-theme-heading-color"
+              : "bg-white hover:bg-general-hover dark:bg-background-color dark:hover:bg-primary-theme-hover text-heading-color"
+          }`}
+        >
+          Wallet
+        </Button>
+      </div>
+
+      {/* SEARCH  */}
+      <div className="xl:w-fit w-full flex items-center gap-4">
+        <Input
+          placeholder="Search Campaign ID"
+          className="h-[40px] rounded-[6px] xl:w-[300px] w-full focus:outline-2 border-border dark:placeholder:text-paragraph-color focus-visible:ring-secondary-theme bg-transparent text-[14px] placeholder:text-[14px] focus-visible:!ring-offset-0 duration-200 transition-all"
+          value={filteredInput}
+          onChange={(e) => setFilteredInput(e.target.value)}
+        />
+
+        <Button
+          onClick={() => {
+            setFilteredInput(filteredInput);
+          }}
+          className="h-[40px] border hover:bg-general-hover text-heading-color !shadow-button-shadow border-border"
+        >
+          <ListFilter />
+          <span className="text-[14px] font-inter tracking-wider">Filter</span>
         </Button>
       </div>
     </div>

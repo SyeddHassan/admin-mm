@@ -46,7 +46,7 @@ const UsersSessionsPage = () => {
         <OperatingSystemUsersCard />
       </div>
 
-      <div className="w-full grid md:grid-cols-2 md:gap-4 gap-8">
+      <div className="w-full grid lg:grid-cols-2 lg:gap-4 gap-8">
         <UsersAvgMessagesCard />
         <UsersAvgInactivityCard />
       </div>

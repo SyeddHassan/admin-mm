@@ -4,13 +4,12 @@ import React from "react";
 import { DateRange } from "react-day-picker";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
-import { ChartJsLineChart03 } from "@/components/charts/chartjs-line-charts";
 import { DateRangePicker } from "@/components/common/date-range-picker";
+import { ChartJsLineChart03 } from "@/components/charts/chartjs-line-charts";
 
-import { BiSolidMessageSquareDetail } from "react-icons/bi";
+import { MousePointerClick } from "lucide-react";
 
-
-const UsersAvgMessagesCard = () => {
+const ConversionsCard = () => {
   const [date, setDate] = React.useState<DateRange | undefined>({
     from: new Date(),
     to: new Date(),
@@ -26,6 +25,7 @@ const UsersAvgMessagesCard = () => {
         <DateRangePicker date={date} setDate={setDate} />
       </CardHeader>
 
+      {/* CONVERSIONS LINE CHART */}
       <CardContent className="py-6 h-[500px]">
         <ChartJsLineChart03
           data={{
@@ -33,16 +33,16 @@ const UsersAvgMessagesCard = () => {
             values: [150, 60, 40, 25, 30, 20, 18],
           }}
           averageLabel={{
-            text: "Avg. Messages by User",
-            value: 8,
-            icon: <BiSolidMessageSquareDetail />,
+            text: "Avg./Day",
+            value: 568,
+            icon: <MousePointerClick />,
           }}
-          leftText="Message"
-          bottomText="Time period"
+          leftText="Conversions"
+          bottomText="Time Period"
         />
       </CardContent>
     </Card>
   );
 };
 
-export default UsersAvgMessagesCard;
+export default ConversionsCard;

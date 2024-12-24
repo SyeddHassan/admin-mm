@@ -21,6 +21,9 @@ const NewCampaignButton = () => {
   const [clientName, setClientName] = useState("");
   const [campaignTitle, setCampaignTitle] = useState("");
   const [linkOnClick, setLinkOnClick] = useState("");
+  const [selectedCampaignDisplay, setSelectedCampaignDisplay] = useState<
+    string[]
+  >([]);
 
   return (
     <Dialog>
@@ -52,11 +55,13 @@ const NewCampaignButton = () => {
           setCampaignTitle={setCampaignTitle}
           linkOnClick={linkOnClick}
           setLinkOnClick={setLinkOnClick}
+          selectedCampaignDisplay={selectedCampaignDisplay}
+          setSelectedCampaignDisplay={setSelectedCampaignDisplay}
         />
 
         <DialogFooter className="md:h-[80px] h-[130px] flex !flex-col !justify-center gap-4">
           <Separator className="h-[2px]" />
-          <div className="md:px-4 flex md:justify-between md:flex-row flex-col max-md:gap-4">
+          <div className="md:px-4 flex md:justify-between md:flex-row flex-col max-md:gap-6">
             <p className="font-inter text-[12px] font-semibold">
               Campaign ends on: 2024, Jan 14
             </p>
