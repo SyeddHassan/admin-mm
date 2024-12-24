@@ -4,6 +4,7 @@ import React, { useState } from "react";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import DatePicker from "@/components/common/date-picker";
+import { ChartJsBarChart07 } from "@/components/charts/chartjs-bar-charts";
 
 const RegionAdCampaignsCard = () => {
   const [selectedDate, setSelectedDate] = useState<Date | undefined>(
@@ -21,7 +22,17 @@ const RegionAdCampaignsCard = () => {
       </CardHeader>
 
       {/* REGION AD CAMPAIGNS BAR CHART */}
-      <CardContent className="h-[500px] py-12"></CardContent>
+      <CardContent className="h-[500px] py-12">
+        <ChartJsBarChart07
+          data={[
+            { region: "Worldwide", campaigns: 383 },
+            { region: "Africa", campaigns: 258 },
+            { region: "Australia", campaigns: 214 },
+            { region: "Asia", campaigns: 120 },
+            { region: "Europe", campaigns: 15 },
+          ]}
+        />
+      </CardContent>
     </Card>
   );
 };

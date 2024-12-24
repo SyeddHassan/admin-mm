@@ -429,15 +429,9 @@ export const ChartJsBarChart04Cofigurations = (): ChartOptions<"bar"> => {
 
       datalabels: {
         display: true,
-        align: (context) => {
-          return context.chart.width < 768 ? "center" : "start";
-        },
-        anchor: (context) => {
-          return context.chart.width < 768 ? "center" : "end";
-        },
-        offset: (context) => {
-          return context.chart.width < 768 ? 0 : -24;
-        },
+        align: "start",
+        anchor: "end",
+        offset: -25,
         color: isDarkTheme ? "#ffffff" : "#000000",
         font: {
           family: "Jetbrains mono",
@@ -509,15 +503,9 @@ export const ChartJsBarChart05Cofigurations = (): ChartOptions<"bar"> => {
       },
       datalabels: {
         display: true,
-        align: (context) => {
-          return context.chart.width < 768 ? "center" : "start";
-        },
-        anchor: (context) => {
-          return context.chart.width < 768 ? "center" : "end";
-        },
-        offset: (context) => {
-          return context.chart.width < 768 ? 0 : -24;
-        },
+        align: "start",
+        anchor: "end",
+        offset: -25,
         color: isDarkTheme ? "#ffffff" : "#000000",
         font: {
           family: "Jetbrains mono",
@@ -657,6 +645,83 @@ export const ChartJsBarChart06Cofigurations = (): ChartOptions<"bar"> => {
     layout: {
       padding: {
         bottom: 20,
+      },
+    },
+  };
+};
+
+export const ChartJsBarChart07Cofigurations = (): ChartOptions<"bar"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    scales: {
+      x: {
+        ticks: {
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        grid: {
+          display: false,
+        },
+      },
+      y: {
+        beginAtZero: true,
+        ticks: {
+          stepSize: 50,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+        },
+      },
+    },
+    plugins: {
+      legend: {
+        display: false,
+      },
+      tooltip: {
+        enabled: true,
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
+        padding: 10,
+        cornerRadius: 5,
+        displayColors: false,
+        bodyFont: {
+          family: "Inter",
+          size: 12,
+        },
+        titleFont: {
+          family: "Inter",
+          size: 14,
+          weight: "bold",
+        },
+      },
+      datalabels: {
+        anchor: "end",
+        align: "top",
+        formatter: (value: number) => value,
+        color: isDarkTheme ? "#ffffff" : "#000000",
+        font: {
+          weight: "bold",
+          size: 12,
+        },
       },
     },
   };

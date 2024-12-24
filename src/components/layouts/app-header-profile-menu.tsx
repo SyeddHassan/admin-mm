@@ -53,7 +53,7 @@ const AppHeaderProfileMenu = () => {
             onClick={() => {
               console.log("View Profile");
             }}
-            className="bg-white hover:bg-general-hover py-2 cursor-pointer dark:bg-background-color"
+            className="bg-white hover:bg-general-hover py-2 cursor-pointer dark:bg-background-color dark:hover:bg-general-hover"
           >
             Change Password
           </DropdownMenuItem>
@@ -61,7 +61,7 @@ const AppHeaderProfileMenu = () => {
           <DropdownMenuItem asChild>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <div className="bg-white hover:bg-general-hover py-2 cursor-pointer !text-[14px] px-2 dark:bg-background-color">
+                <div className="bg-white hover:bg-general-hover py-2 cursor-pointer !text-[14px] px-2 dark:bg-background-color dark:hover:bg-general-hover">
                   Log Out
                 </div>
               </AlertDialogTrigger>
@@ -71,8 +71,8 @@ const AppHeaderProfileMenu = () => {
                     Confirm Logout
                   </AlertDialogTitle>
                   <AlertDialogDescription>
-                    Logging out will end your current . Make sure to save
-                    any unsaved progress before proceeding.
+                    Logging out will end your current . Make sure to save any
+                    unsaved progress before proceeding.
                   </AlertDialogDescription>
                 </AlertDialogHeader>
                 <AlertDialogFooter className="max-md:mt-4">

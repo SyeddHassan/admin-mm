@@ -336,7 +336,7 @@ export const ChartJsLineChart05Cofigurations = (): ChartOptions<"line"> => {
       y: {
         grid: {
           display: true,
-          color: "rgba(0, 0, 0, 0.1)",
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
         },
         ticks: {
           stepSize: 30,
@@ -525,7 +525,7 @@ export const ChartJsLineChart06Cofigurations = (): ChartOptions<"line"> => {
         tension: 0.4,
       },
       point: {
-        radius: 4,
+        radius: 3,
         hoverRadius: 6,
       },
     },

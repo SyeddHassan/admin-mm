@@ -22,8 +22,8 @@ const FileTypesCard = () => {
       </CardHeader>
 
       {/* FILE TYPES PIE CHART */}
-      <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
-        <div className="w-full max-w-[450px]">
+      <CardContent className="h-[600px] py-0 flex-center px-4">
+        <div className="w-full h-full lg:max-w-[400px] max-w-[300px] flex-center">
         <ChartJsDoughnutChart04
           chartData={[
             { label: "Image", percentage: 50, color: "#5ebce1" },

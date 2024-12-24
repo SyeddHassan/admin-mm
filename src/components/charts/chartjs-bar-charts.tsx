@@ -9,6 +9,7 @@ import {
   ChartJsBarChart04Props,
   ChartJsBarChart05Props,
   ChartJsBarChart06Props,
+  ChartJsBarChart07Props,
 } from "@/interfaces/analytics/chartjs-bar-charts-interfaces";
 
 import {
@@ -18,6 +19,7 @@ import {
   ChartJsBarChart04Cofigurations,
   ChartJsBarChart05Cofigurations,
   ChartJsBarChart06Cofigurations,
+  ChartJsBarChart07Cofigurations,
 } from "@/configurations/chartjs-bar-charts-configurations";
 
 import { Bar } from "react-chartjs-2";
@@ -180,25 +182,47 @@ export const ChartJsBarChart05 = ({ data }: ChartJsBarChart05Props) => {
   );
 };
 
-export const ChartJsBarChart06 = ({ data }: ChartJsBarChart06Props) => {
+export const ChartJsBarChart06 = ({
+  data,
+  legends,
+  colors,
+}: ChartJsBarChart06Props) => {
   const chartData = {
     labels: data.labels,
     datasets: [
       {
-        label: "Sessions",
+        label: legends[0],
         data: data.sessions,
-        backgroundColor: "rgb(52, 211, 153)", 
+        backgroundColor: colors[0], 
         borderRadius: 4,
       },
       {
-        label: "Project Mode Activation",
+        label: legends[1], 
         data: data.activations,
-        backgroundColor: "rgb(251, 191, 36)", 
+        backgroundColor: colors[1], 
         borderRadius: 4,
       },
     ],
   };
 
   const options = ChartJsBarChart06Cofigurations();
+  return <Bar data={chartData} options={options} />;
+};
+
+export const ChartJsBarChart07 = ({ data }: ChartJsBarChart07Props) => {
+  const chartData = {
+    labels: data.map((item) => item.region),
+    datasets: [
+      {
+        label: "Campaigns",
+        data: data.map((item) => item.campaigns),
+        backgroundColor: "#2075C5",
+        borderRadius: 4,
+      },
+    ],
+  };
+
+  const options = ChartJsBarChart07Cofigurations();
+
   return <Bar data={chartData} options={options} />;
 };

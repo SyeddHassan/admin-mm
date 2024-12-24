@@ -40,4 +40,13 @@ export interface ChartJsBarChart06Props {
     sessions: number[];
     activations: number[];
   };
+  legends: string[];
+  colors: string[];
+}
+
+export interface ChartJsBarChart07Props {
+  data: {
+    region: string;
+    campaigns: number;
+  }[];
 }

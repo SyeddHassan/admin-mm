@@ -41,6 +41,8 @@ const ProjectModeActivationsCard = () => {
             sessions: [75, 82, 98, 95, 85, 105, 90, 112, 92],
             activations: [35, 38, 35, 28, 45, 48, 50, 52, 38],
           }}
+          legends={["Sessions", "Project Mode Activation"]}
+          colors={["#4DD992", "#F6A939"]}
         />
       </CardContent>
     </Card>

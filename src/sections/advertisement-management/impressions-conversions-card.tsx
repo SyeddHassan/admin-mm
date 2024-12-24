@@ -5,6 +5,7 @@ import { DateRange } from "react-day-picker";
 
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { DateRangePicker } from "@/components/common/date-range-picker";
+import { ChartJsBarChart06 } from "@/components/charts/chartjs-bar-charts";
 
 const ImpressionsConversionsCard = () => {
   const [date, setDate] = React.useState<DateRange | undefined>({
@@ -23,7 +24,27 @@ const ImpressionsConversionsCard = () => {
       </CardHeader>
 
       {/* IMPRESSION CONVERSION BAR CHART */}
-      <CardContent className="py-8 h-[650px] max-md:px-2"></CardContent>
+      <CardContent className="py-8 h-[650px] max-md:px-2">
+        <ChartJsBarChart06
+          data={{
+            labels: [
+              "Feb",
+              "Mar",
+              "Apr",
+              "May",
+              "Jun",
+              "Jul",
+              "Aug",
+              "Sep",
+              "Oct",
+            ],
+            sessions: [75, 82, 98, 95, 85, 105, 90, 112, 92],
+            activations: [35, 38, 35, 28, 45, 48, 50, 52, 38],
+          }}
+          legends={["Impressions", "Conversions"]}
+          colors={["#0C62EC", "#AB40E8"]}
+        />
+      </CardContent>
     </Card>
   );
 };

@@ -77,8 +77,8 @@ const columns = [
   }),
   columnHelper.accessor("sessionDuration", {
     cell: (info) => (
-      <Badge className="bg-[#fff9e6] text-[#4b4b00] inline-flex items-center">
-        <Clock className="h-3 w-3 mr-1 hidden sm:inline" />
+      <Badge className="bg-[#fff9e6] text-[#4b4b00] flex-center">
+        <Clock className="h-3 w-3 mr-1" />
         <span>{info.getValue()}</span>
       </Badge>
     ),
@@ -87,7 +87,7 @@ const columns = [
   columnHelper.accessor("sessionCount", {
     cell: (info) => (
       <Badge className="inline-flex items-center">
-        <Activity className="h-3 w-3 mr-1 text-red-600 hidden sm:inline" />
+        <Activity className="h-3 w-3 mr-1 text-red-600" />
         <span>{info.getValue()}</span>
       </Badge>
     ),
@@ -143,7 +143,7 @@ const RealTimeSessionMonitoringViewParticipantsTable = () => {
                 >
                   <div className="flex flex-col sm:flex-row sm:items-center gap-2">
                     <span className="font-medium sm:hidden">
-                      {cell.column.columnDef.header as string}:
+                      {cell.column.columnDef.header as string}
                     </span>
                     {flexRender(cell.column.columnDef.cell, cell.getContext())}
                   </div>

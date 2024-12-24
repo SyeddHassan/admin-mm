@@ -22,7 +22,7 @@ const ChatGPTPromptsCard = () => {
       </CardHeader>
 
       {/* CHATGPT PROMPTS DOUGHNUT CHART */}
-      <CardContent className="py-4 mx-auto lg:h-[500px] lg:flex-center max-lg:py-12 px-0">
+      <CardContent className="h-[600px] py-0 flex-center px-4">
         <div className="w-full max-w-[470px]">
         <ChartJsDoughnutChart04
           chartData={[
