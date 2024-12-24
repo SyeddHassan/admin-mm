@@ -11,6 +11,7 @@ import {
   ChartJsLineChart06Props,
   ChartJsLineChart07Props,
   ChartJsLineChart08Props,
+  ChartJsLineChart09Props,
 } from "@/interfaces/analytics/chartjs-line-charts-interfaces";
 
 import {
@@ -22,6 +23,7 @@ import {
   ChartJsLineChart06Cofigurations,
   ChartJsLineChart07Cofigurations,
   ChartJsLineChart08Cofigurations,
+  ChartJsLineChart09Cofigurations,
 } from "@/configurations/chartjs-line-charts-configurations";
 
 import {
@@ -308,3 +310,36 @@ export const ChartJsLineChart08 = ({ data }: ChartJsLineChart08Props) => {
 
   return <Line options={options} data={chartData} className="w-full h-full" />;
 };
+
+export const ChartJsLineChart09 = ({ data }: ChartJsLineChart09Props) =>{
+  const chartData= {
+    labels: data.map(point => point.timestamp),
+    datasets: [
+      {
+        label: 'Response Time (ms)',
+        data: data.map(point => point.responseTime),
+        borderColor: 'rgb(255, 87, 34)', // Direct value
+        backgroundColor: 'rgba(255, 87, 34, 0.1)', // Direct value
+        borderWidth: 2,
+        tension: 0.4,
+        pointRadius: 0,
+      },
+      {
+        label: 'Content Length (kb)',
+        data: data.map(point => point.contentLength),
+        borderColor: 'rgb(76, 175, 80)', // Direct value
+        backgroundColor: 'rgba(76, 175, 80, 0.1)', // Direct value
+        borderWidth: 2,
+        tension: 0.4,
+        pointRadius: 0,
+      },
+    ],
+  }
+
+  const options = ChartJsLineChart09Cofigurations();
+
+  return(
+    <Line data={chartData} options={options} />
+
+  )
+}

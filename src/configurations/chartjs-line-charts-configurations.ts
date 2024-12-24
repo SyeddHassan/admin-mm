@@ -729,16 +729,15 @@ export const ChartJsLineChart08Cofigurations = (): ChartOptions<"line"> => {
         ticks: {
           color: isDarkTheme ? "#ffffff" : "#000000",
         },
-        
       },
     },
     elements: {
       line: {
-        tension: 0.4, 
+        tension: 0.4,
         borderWidth: 2,
       },
       point: {
-        radius: 3, 
+        radius: 3,
         hoverRadius: 4,
       },
     },
@@ -746,6 +745,114 @@ export const ChartJsLineChart08Cofigurations = (): ChartOptions<"line"> => {
       mode: "nearest",
       intersect: false,
       axis: "x",
+    },
+  };
+};
+
+export const ChartJsLineChart09Cofigurations = (): ChartOptions<"line"> => {
+  const { theme } = useTheme();
+  const isDarkTheme = theme === "dark";
+
+  return {
+    responsive: true,
+    maintainAspectRatio: false,
+    interaction: {
+      mode: "index",
+      intersect: false,
+    },
+    plugins: {
+      legend: {
+        position: "top" as const,
+        labels: {
+          usePointStyle: true,
+          pointStyle: "circle",
+          pointStyleWidth: 10,
+          boxHeight: 7,
+          padding: 25,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+            weight: "normal",
+          },
+        },
+      },
+
+      tooltip: {
+        enabled: true,
+        backgroundColor: isDarkTheme ? "#ffffff" : "#000000",
+        titleColor: isDarkTheme ? "#000000" : "#ffffff",
+        bodyColor: isDarkTheme ? "#000000" : "#ffffff",
+        padding: 10,
+        cornerRadius: 5,
+        boxWidth: 10,
+        boxHeight: 10,
+        displayColors: false,
+        bodyFont: {
+          family: "Inter",
+          size: 12,
+          weight: "normal",
+        },
+        titleFont: {
+          family: "Inter",
+          size: 14,
+          weight: "bold",
+        },
+        footerFont: {
+          family: "Inter",
+          size: 12,
+          weight: "normal",
+        },
+        caretSize: 5,
+        caretPadding: 10,
+        animation: {
+          duration: 1000,
+          easing: "easeOutCubic",
+        },
+      },
+
+      datalabels: {
+        display: false,
+      },
+    },
+    scales: {
+      x: {
+        grid: {
+          display: false,
+        },
+
+        ticks: {
+          stepSize: 5,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+          maxRotation: 45,
+          minRotation: 45,
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+      },
+      y: {
+        grid: {
+          color: isDarkTheme ? "#ffffff1a" : "#0000001a",
+        },
+        min: 0,
+        max: 3000,
+        ticks: {
+          stepSize: 500,
+          color: isDarkTheme ? "#ffffff" : "#000000",
+          font: {
+            family: "Inter",
+            size: 14,
+          },
+        },
+        border: {
+          color: isDarkTheme ? "#000000" : "#ffffff",
+        },
+      },
     },
   };
 };

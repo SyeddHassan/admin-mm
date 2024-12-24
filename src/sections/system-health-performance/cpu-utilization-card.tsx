@@ -22,7 +22,7 @@ const CpuUtilizationCard = () => {
       </CardHeader>
 
       {/* CPU UTILIZATION GAUGE CHART */}
-      <CardContent className="md:h-[500px] h-full max-md:pb-[5rem] flex-center mx-auto">
+      <CardContent className="w-full flex justify-center items-center py-6">
         <ChartJsGaugeChart percentage={30} />
       </CardContent>
     </Card>

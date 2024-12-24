@@ -75,3 +75,11 @@ export interface ChartJsLineChart08Props {
     }[];
   };
 }
+
+export interface ChartJsLineChart09Props{
+  data: {
+    timestamp: string;
+    responseTime: number;
+    contentLength: number;
+  }[];
+}

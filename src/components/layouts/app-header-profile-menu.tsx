@@ -47,13 +47,13 @@ const AppHeaderProfileMenu = () => {
 
         <DropdownMenuContent
           align="end"
-          className="w-48 bg-white font-inter animation-standard p-2 py-4 space-y-2"
+          className="w-48 bg-white font-inter animation-standard p-2 py-4 space-y-2 dark:bg-background-color border-border"
         >
           <DropdownMenuItem
             onClick={() => {
               console.log("View Profile");
             }}
-            className="bg-white hover:bg-general-hover py-2 cursor-pointer"
+            className="bg-white hover:bg-general-hover py-2 cursor-pointer dark:bg-background-color"
           >
             Change Password
           </DropdownMenuItem>
@@ -61,7 +61,7 @@ const AppHeaderProfileMenu = () => {
           <DropdownMenuItem asChild>
             <AlertDialog>
               <AlertDialogTrigger asChild>
-                <div className="bg-white hover:bg-general-hover py-2 cursor-pointer !text-[14px] px-2">
+                <div className="bg-white hover:bg-general-hover py-2 cursor-pointer !text-[14px] px-2 dark:bg-background-color">
                   Log Out
                 </div>
               </AlertDialogTrigger>
